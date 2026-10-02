@@ -12,7 +12,7 @@ It looks backward only. It gives no advice on any stock or contract, predicts no
 
 ## What it does
 
-1. **Reads a channel four ways**: a public Telegram link, a Telegram export file, a WhatsApp chat export, or pasted messages.
+1. **Reads a channel five ways**: a public Telegram link, a Telegram export file, a WhatsApp chat export, screenshots of the chat, or pasted messages. Screenshots are read on the device and shown for correction first.
 2. **Finds the calls** with a fixed set of rules, so the same message always reads the same way. English, Hindi and Hinglish; options, futures and shares; misspelt names; calls split across messages; reposts.
 3. **Replays each call** on the exact contract's daily prices from NSE and BSE: entry at the quoted price if it traded, exit at the first target, the stop-loss, or expiry.
 4. **Keeps a ledger**: ₹50,000 to start, ₹10,000 in every call, whole lots, costs taken off. It stops taking calls when the account cannot pay for one.
@@ -69,6 +69,7 @@ flowchart TB
     L["Public Telegram link"]
     E["Telegram export"]
     W["WhatsApp export"]
+    H["Screenshots<br/>read on the device"]
     P["Pasted messages"]
   end
 
@@ -94,6 +95,7 @@ flowchart TB
   L --> R --> I
   E --> I
   W --> I
+  H --> I
   P --> I
   I --> X --> C --> Y --> G --> V
   X --> K
@@ -101,7 +103,7 @@ flowchart TB
   S -- "only the files<br/>a channel needs" --> C
 ```
 
-The server does two things: it relays a public channel's preview page, and it serves static files. Reading, replaying and every figure in the report are computed in the browser, so messages from an export or a paste never leave the device.
+The server does two things: it relays a public channel's preview page, and it serves static files. Reading, replaying and every figure in the report are computed in the browser, so messages from an export, a screenshot or a paste never leave the device.
 
 ## Project structure
 
@@ -125,19 +127,20 @@ reckoning/
 │   │   ├── registration.ts     SEBI registration numbers against the register
 │   │   └── reckon.ts           runs all of the above for one channel
 │   ├── data/                   compact price-file format and its reader
-│   ├── ingest/                 Telegram preview, Telegram export, WhatsApp export, pasted text
+│   ├── ingest/                 Telegram preview, Telegram export, WhatsApp export, screenshots, pasted text
 │   ├── worker/                 runs the engine off the main thread
 │   ├── components/
 │   │   ├── landing/            the exhibits below the ledger replay
 │   │   └── reckon/             report sections and charts
-│   ├── lib/                    the text in eight languages, formats, spoken numbers, complaint draft
+│   ├── lib/                    the text in eight languages, formats, spoken numbers, complaint draft, screenshot reader
 │   └── samples/                figures the pages show, written by the scripts
 ├── scripts/                    data download and build, sample, figures, case, voice
-├── tests/                      273 tests, including 184 hand-checked real messages
+├── tests/                      282 tests, including 184 hand-checked real messages
 └── public/
     ├── data/                   price files (663 trading days) and the register copy
     ├── samples/                the sample channel, identifying details removed
-    └── audio/                  the recorded summaries
+    ├── audio/                  the recorded summaries
+    └── ocr/                    the screenshot reader and its English language file
 ```
 
 ## How a call is checked
@@ -153,7 +156,7 @@ The full rules are on the site's "How it is checked" page and in `src/engine/`.
 ## What it cannot do
 
 - It cannot see inside a trading day. The exchanges publish one open, high, low and close per day; results that depend on the order of prices within the day are marked, and the account is given as a range.
-- It cannot read calls posted as pictures.
+- It does not read pictures a channel posts in place of text. Screenshots a person brings are read as English text only; the day they were posted has to be confirmed, and a misread figure corrected by hand.
 - It has no prices for commodities, currencies, crypto or foreign markets, and says so for each such call.
 - It cannot read a channel whose public preview is switched off, except from an export file.
 - Stock option contracts are not restated across a split or bonus.
@@ -166,7 +169,7 @@ The full rules are on the site's "How it is checked" page and in `src/engine/`.
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm test           # 273 tests
+npm test           # 282 tests
 npm run build
 ```
 
@@ -192,7 +195,7 @@ npm run voice                                        # the recorded summaries (n
 
 ## Third-party software
 
-Next.js, React, Tailwind CSS, GSAP (scroll motion), fflate (decompression), Vitest and Playwright (tests and checks). Fonts: Fraunces, Instrument Sans, IBM Plex Mono, Rozha One, Anek Devanagari, all under the SIL Open Font License. The recorded summaries are spoken by Kokoro-82M (Apache-2.0), run locally once; the site calls no speech or language service. No language model is used anywhere: the reader is a fixed set of rules.
+Next.js, React, Tailwind CSS, GSAP (scroll motion), fflate (decompression), Tesseract.js (reads the text in screenshots, in the browser; Apache-2.0), Vitest and Playwright (tests and checks). Fonts: Fraunces, Instrument Sans, IBM Plex Mono, Rozha One, Anek Devanagari, all under the SIL Open Font License. The recorded summaries are spoken by Kokoro-82M (Apache-2.0), run locally once; the site calls no speech or language service. No language model is used anywhere: the reader is a fixed set of rules.
 
 ## Licence
 
