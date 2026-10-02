@@ -11,6 +11,7 @@ import { PauseCard } from "../PauseCard";
 import { CallChart, EquityBand } from "./charts";
 import { Complaint, EvidenceSheet } from "./Complaint";
 import { Flags } from "./Flags";
+import { Verdict, verdictOf } from "./Verdict";
 import { WhatIf } from "./WhatIf";
 
 export function Report({ r, days }: { r: Reckoning; days: string[] }) {
@@ -35,6 +36,7 @@ export function Report({ r, days }: { r: Reckoning; days: string[] }) {
     <>
     <EvidenceSheet r={r} days={days} />
     <div className="mx-auto grid max-w-[1440px] grid-cols-[minmax(0,1fr)] gap-8 px-5 pb-24 pt-8 font-body sm:px-10 lg:grid-cols-[380px_minmax(0,1fr)] lg:gap-12 lg:px-[72px] lg:pt-10 print:hidden">
+      <Verdict r={r} />
       <aside className="min-w-0 lg:sticky lg:top-6 lg:max-h-[calc(100dvh-3rem)] lg:self-start lg:overflow-y-auto lg:pb-3 lg:pr-3">
         <Slip r={r} date={date} />
       </aside>
@@ -156,20 +158,26 @@ function Slip({ r, date }: { r: Reckoning; date: (i?: number) => string }) {
         </div>
 
         <Label className="mt-6">{R.account}</Label>
-        <div className={`tnum mt-1 font-mono text-[1.7rem] font-semibold leading-none ${lost ? "text-red" : "text-type"}`}>
-          <span className="text-type/60">{rupees(L.startBalance)} →</span> {rupees(L.finalBalance)}
-        </div>
-        <div className="mt-2 font-mono text-[11px] leading-relaxed text-soft">
-          {R.accountRule(stake)}
-          <br />
-          {L.outOfMoneyDay !== undefined ? <span className="font-semibold text-red">{R.ranOut(date(L.outOfMoneyDay), L.counts.taken)}</span> : R.afterCalls(L.counts.taken)}
-        </div>
-        {best !== worst && (
-          <div className="mt-3 border-l-2 border-ochre pl-3 font-mono text-[11px] leading-relaxed text-type/80">
-            {R.band} <b className="tnum">{rupees(worst)}</b> {R.bandWorst} <b className="tnum">{rupees(best)}</b>
-          </div>
-        )}
+        {verdictOf(r) === "nothing" ? (
+          <div className="mt-1 text-[15px] font-semibold leading-snug">{R.verdict.noReplay}</div>
+        ) : (
+          <>
+            <div className={`tnum mt-1 font-mono text-[1.7rem] font-semibold leading-none ${lost ? "text-red" : "text-type"}`}>
+              <span className="text-type/60">{rupees(L.startBalance)} →</span> {rupees(L.finalBalance)}
+            </div>
+            <div className="mt-2 font-mono text-[11px] leading-relaxed text-soft">
+              {R.accountRule(stake)}
+              <br />
+              {L.outOfMoneyDay !== undefined ? <span className="font-semibold text-red">{R.ranOut(date(L.outOfMoneyDay), L.counts.taken)}</span> : R.afterCalls(L.counts.taken)}
+            </div>
+            {best !== worst && (
+              <div className="mt-3 border-l-2 border-ochre pl-3 font-mono text-[11px] leading-relaxed text-type/80">
+                {R.band} <b className="tnum">{rupees(worst)}</b> {R.bandWorst} <b className="tnum">{rupees(best)}</b>
+              </div>
+            )}
 
+          </>
+        )}
         <Label className="mt-7">{R.record}</Label>
         <div className="mt-1 font-mono text-[11px] text-soft">{R.recordSub(k.checked, r.extraction.calls.length)}</div>
         {k.checked > 0 && (
