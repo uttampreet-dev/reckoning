@@ -9,9 +9,9 @@ import { EASE, Exhibit, Title, useScene, useWidth } from "./kit";
 const field = data.field;
 
 export function CoinTest() {
-  const { t, lang } = useLang();
+  const { t, lang, indic } = useLang();
   const L = t.landing.coin;
-  const label = lang === "hi" ? "font-body text-[12px]" : "font-mono text-[11px]";
+  const label = indic ? "font-body text-[12px]" : "font-mono text-[11px]";
 
   const [box, W] = useWidth<HTMLDivElement>(558);
   const narrow = W < 480;

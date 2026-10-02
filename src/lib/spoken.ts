@@ -2,12 +2,12 @@
 import hero from "@/samples/hero.json";
 import type { Lang } from "./i18n";
 import { say } from "./say";
-import { en, hi } from "./strings";
+import type { Strings } from "./strings/en";
 
-export function heroSpoken(lang: Lang): string {
+export function heroSpoken(t: Strings, lang: Lang): string {
   const subscribers = Math.round(parseFloat(hero.subscribers) * (/K/i.test(hero.subscribers) ? 1000 : 1));
   const w = (n: number) => say(n, lang);
-  const text = (lang === "hi" ? hi : en).replay.spoken({
+  const text = t.replay.spoken({
     subs: w(subscribers),
     start: w(hero.start),
     stake: w(hero.stake),

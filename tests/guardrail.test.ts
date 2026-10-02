@@ -1,10 +1,13 @@
 // The product looks backward only. Nothing it prints may tell anyone what to do with a stock, promise a return,
 // or forecast a price. This reads every line of interface text and fails on wording that would.
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { complaintDraft } from "../src/lib/complaint";
 
-const source = readFileSync(new URL("../src/lib/strings.ts", import.meta.url), "utf8");
+const dir = new URL("../src/lib/strings/", import.meta.url);
+const source = readdirSync(dir)
+  .map((f) => readFileSync(new URL(f, dir), "utf8"))
+  .join("\n");
 // labels for what a channel's own messages say ("Guarantees and sure shots") describe others' wording, not ours
 const ours = source.replace(/cues: \{[\s\S]*?\n {4}\},/g, "");
 

@@ -15,9 +15,9 @@ const BEFORE: [number, number][] = [[0, bar.o], [0.1, bar.o + (bar.h - bar.o) * 
 const AFTER: [number, number][] = [[0, bar.o], [0.15, bar.o - 8], [AT, d.entry!], [0.4, bar.l], [0.6, bar.o + 17], [0.78, bar.h], [0.9, bar.c + 11], [1, bar.c]];
 
 export function Readings() {
-  const { t, lang } = useLang();
+  const { t, lang, indic } = useLang();
   const L = t.landing.readings;
-  const label = lang === "hi" ? "font-body text-[13px]" : "font-mono text-[11.5px]";
+  const label = indic ? "font-body text-[13px]" : "font-mono text-[11.5px]";
 
   const lo = bar.l - 14,
     hi = bar.h + 16;

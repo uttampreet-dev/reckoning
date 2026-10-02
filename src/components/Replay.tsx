@@ -142,7 +142,7 @@ export function Replay() {
   const settled = rows.filter((e) => stage[e.id] === 2);
   const balance = settled.length ? settled[settled.length - 1].row!.balance : hero.start;
   const curve = [hero.start, ...settled.filter((e) => e.row!.status === "taken").map((e) => e.row!.balance)];
-  const spoken = heroSpoken(lang);
+  const spoken = heroSpoken(t, lang);
 
   return (
     <div ref={root} data-replay className="relative min-w-0 select-none font-body" aria-label={t.replay.sample}>
@@ -228,7 +228,7 @@ export function Replay() {
             {t.replay.full}
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </Link>
-          <ListenButton text={spoken} recorded={voice[lang]} />
+          <ListenButton text={spoken} recorded={(voice as Record<string, { text: string; src: string }>)[lang]} />
           <button onClick={() => setRun((n) => n + 1)} className="cursor-pointer border-b border-type pb-px text-type transition-colors hover:border-red hover:text-red" tabIndex={done ? 0 : -1}>
             ↻ {t.replay.again}
           </button>

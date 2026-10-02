@@ -22,7 +22,7 @@ export function ListenButton({ text, recorded }: { text: string; recorded?: Reco
     if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
     const pick = () => {
       const voices = window.speechSynthesis.getVoices();
-      const want = lang === "hi" ? "hi" : "en";
+      const want = lang;
       // an Indian voice when there is one, any voice of the language otherwise
       setVoice(voices.find((v) => v.lang === `${want}-IN`) ?? voices.find((v) => v.lang.startsWith(want)) ?? null);
     };

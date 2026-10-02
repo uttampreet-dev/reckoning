@@ -60,7 +60,7 @@ export function ReckonScreen() {
           const res = await fetch(`/samples/${encodeURIComponent(sample)}.json`);
           if (!res.ok) throw new Error(R.failed);
           const channel = (await res.json()) as Channel;
-          if (sample === hero.sample) channel.title = hero.label[lang];
+          if (sample === hero.sample) channel.title = t.replay.sampleTitle;
           run(channel);
         } else if (handle) {
           const messages = new Map<number, Msg>();

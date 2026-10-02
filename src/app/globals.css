@@ -18,7 +18,7 @@
   --color-chalk: #e9e4d6;
 
   --font-display: var(--font-fraunces), var(--font-rozha), Georgia, serif;
-  --font-body: var(--font-instrument), var(--font-anek-deva), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-instrument), var(--font-anek-deva), var(--font-anek-gu), var(--font-anek-pa), var(--font-anek-bn), var(--font-anek-ta), var(--font-anek-te), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-instrument), var(--font-anek-deva), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
 
@@ -41,7 +41,7 @@ body {
 }
 
 /* Devanagari needs more line height than Latin at the same size */
-:lang(hi) body {
+html[data-indic] body {
   line-height: 1.6;
 }
 
@@ -99,9 +99,16 @@ body {
     font-variation-settings: "opsz" 144;
     letter-spacing: -0.03em;
   }
-  :lang(hi) .display {
-    font-family: var(--font-rozha), var(--font-fraunces), serif;
+  /* Indian scripts: no tight tracking; a bold text face, except Devanagari, which has its own display face */
+  html[data-indic] .display:not([lang="en"]) {
+    font-family: var(--font-body);
+    font-variation-settings: normal;
     letter-spacing: 0;
+    font-weight: 700;
+  }
+  html[data-indic]:lang(hi) .display:not([lang="en"]),
+  html[data-indic]:lang(mr) .display:not([lang="en"]) {
+    font-family: var(--font-rozha), var(--font-fraunces), serif;
     font-weight: 400;
   }
   /* a printed sheet: hard edge, hard shadow */
@@ -130,7 +137,7 @@ body {
     border-radius: 2px;
   }
   /* Devanagari needs more size than Latin capitals to stay legible in a small box */
-  :lang(hi) .mark-box {
+  html[data-indic] .mark-box {
     font-size: 1.25em;
     letter-spacing: 0;
   }
@@ -196,8 +203,8 @@ body {
 
 /* Devanagari has no capitals and reads badly when letter-spaced: small labels switch to the text face.
    Outside the layers so it wins over the size and spacing utilities on the same element. */
-:lang(hi) .tag,
-:lang(hi) .eyebrow {
+html[data-indic] .tag,
+html[data-indic] .eyebrow {
   font-family: var(--font-body);
   font-size: 13.5px;
   letter-spacing: 0.02em;

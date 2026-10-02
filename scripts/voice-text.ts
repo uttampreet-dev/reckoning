@@ -3,9 +3,11 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { heroSpoken } from "../src/lib/spoken";
+import { en } from "../src/lib/strings/en";
+import { hi } from "../src/lib/strings/hi";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 await mkdir(path.join(ROOT, "data-raw", "voice"), { recursive: true });
-const text = { en: heroSpoken("en"), hi: heroSpoken("hi") };
+const text = { en: heroSpoken(en, "en"), hi: heroSpoken(hi, "hi") };
 await writeFile(path.join(ROOT, "data-raw", "voice", "text.json"), JSON.stringify(text, null, 1));
 console.log(`en ${text.en.length} characters, hi ${text.hi.length} characters`);

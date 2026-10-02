@@ -28,6 +28,8 @@ function groups(n: number) {
 
 /** 8435 -> "eight thousand four hundred and thirty-five" / "आठ हज़ार चार सौ पैंतीस" */
 export function say(value: number, lang: Lang = "en"): string {
+  // number words exist for English and Hindi; in the other languages the speech voice reads the figure itself
+  if (lang !== "en" && lang !== "hi") return String(Math.round(value));
   const n = Math.round(Math.abs(value));
   const minus = value < 0 && n > 0;
   let words: string;

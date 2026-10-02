@@ -31,8 +31,8 @@ export function useScene<T extends HTMLElement>(build: (root: T) => void | (() =
 
 /** A heading whose words rise in one after another when it scrolls into view. */
 export function Title({ children, className = "" }: { children: string; className?: string }) {
-  const { lang } = useLang();
-  const size = lang === "hi" ? "text-[2.1rem] leading-[1.28] sm:text-[3rem] lg:text-[3.7rem]" : "text-[2.5rem] font-bold leading-[1] sm:text-[3.5rem] lg:text-[4.4rem]";
+  const { lang, indic } = useLang();
+  const size = indic ? "text-[2.1rem] leading-[1.28] sm:text-[3rem] lg:text-[3.7rem]" : "text-[2.5rem] font-bold leading-[1] sm:text-[3.5rem] lg:text-[4.4rem]";
   return (
     <h2 data-title className={`display ${size} ${className}`}>
       {children.split(" ").map((w, i) => (

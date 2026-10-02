@@ -15,7 +15,7 @@ const off = data.onOrdinaryDays;
 const SHOWN = 24;
 
 export function CaseFile() {
-  const { t, lang } = useLang();
+  const { t, lang, indic } = useLang();
   const C = t.caseFile;
   const [all, setAll] = useState(false);
   const rows = all ? data.table : data.table.slice(0, SHOWN);
@@ -29,7 +29,7 @@ export function CaseFile() {
       <div className="grid grid-cols-[minmax(0,1fr)] gap-x-16 gap-y-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
         <div>
           <div className="tag">{C.tag}</div>
-          <h1 className={`display mt-4 ${lang === "hi" ? "text-[2.2rem] leading-[1.28] sm:text-[3.1rem]" : "text-[2.6rem] font-bold leading-[1] sm:text-[3.7rem] lg:text-[4.2rem]"}`}>{C.title}</h1>
+          <h1 className={`display mt-4 ${indic ? "text-[2.2rem] leading-[1.28] sm:text-[3.1rem]" : "text-[2.6rem] font-bold leading-[1] sm:text-[3.7rem] lg:text-[4.2rem]"}`}>{C.title}</h1>
         </div>
         <div className="lg:pt-10">
           <p className="text-[18px] leading-relaxed text-type/85">{C.lead(shortDate(data.order.date, lang, true))}</p>
