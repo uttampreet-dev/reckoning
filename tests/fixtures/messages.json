@@ -1,0 +1,2741 @@
+[
+ {
+  "text": "nifty 23050----23100 let the range cross then only take entry , high probability of theta decay unless you are not a good scalpers",
+  "ts": "2026-09-25T05:59:03.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Buy hero moto 5300 ce 57 sl 47 tgt 75/95",
+  "ts": "2026-09-25T06:17:19.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "HEROMOTOCO",
+   "strike": 5300,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 57
+   },
+   "targets": [
+    75,
+    95
+   ],
+   "stop": 47,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "nifty 23150 PE and heromoto 5300 CE both are giving profit on oppositive direction , enjoy profit",
+  "ts": "2026-09-25T07:38:29.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "buy bank nifty 54800 pe 300 sl 250 tgt 400/500",
+  "ts": "2026-09-28T04:39:32.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "BANKNIFTY",
+   "strike": 54800,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 300
+   },
+   "targets": [
+    400,
+    500
+   ],
+   "stop": 250,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Buy nifty 22700 ce 45-50 sl 20 tgt 75/100",
+  "ts": "2026-09-29T05:55:35.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 22700,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 45,
+    "hi": 50
+   },
+   "targets": [
+    75,
+    100
+   ],
+   "stop": 20,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "EXIT @388.80\n\nCreated Date & Time\n12:35 PM\n18/06/25",
+  "ts": "2025-06-18T07:05:59.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "exit"
+  }
+ },
+ {
+  "text": "🔴 SELL SBICARD 1 shares at 972.00.\n\nMessage : SL 987 TGT 949 Modify Qty/ Lot as per your discretion\n\nCreated Date & Time\n12:50 PM\n18/06/25",
+  "ts": "2025-06-18T07:20:20.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "SBICARD",
+   "side": "short",
+   "entry": {
+    "type": "at",
+    "lo": 972
+   },
+   "targets": [
+    949
+   ],
+   "stop": 987,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "🟢 BUY KPITTECH 1 shares at 1415.20.\n\nMessage : SL  1384  TGT  1464 modify Qty/ Lot as per your discretion\n\nCreated Date & Time\n01:56 PM\n18/06/25",
+  "ts": "2025-06-18T08:26:40.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "KPITTECH",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 1415.2
+   },
+   "targets": [
+    1464
+   ],
+   "stop": 1384,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "🟢 BUY NIFTY 19 JUN 25 24850 CE 1 lots at 30.00.\n\nExpiry : 19-Jun-2025\n\nMessage : SL 6 TGT 70  Modify Qty/ Lot as per your discretion\n\nCreated Date & Time\n09:33 AM\n19/06/25",
+  "ts": "2025-06-19T04:03:37.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24850,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 30
+   },
+   "targets": [
+    70
+   ],
+   "stop": 6,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Hurry up and unlock this before the content expires or is removed ⚡️ [link removed]",
+  "ts": "2026-05-20T11:34:43.000Z",
+  "is": "other"
+ },
+ {
+  "text": "50 lot trade\n\n500 to 850++++++++++++++++  twice\n\nwat else u want??????????  😜😜😜",
+  "ts": "2026-05-21T04:17:31.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "HNI TRADE\n\nBUY CUMMINSIND  5800 CE @ 100-80 SL 60 TGT 180-200++",
+  "ts": "2026-06-09T03:56:21.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "CUMMINSIND",
+   "strike": 5800,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 80,
+    "hi": 100
+   },
+   "targets": [
+    180,
+    200
+   ],
+   "stop": 60,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "HNI TRADE\n\nBUY SBIN 1050 CE @ 21-17 SL 12 TGT 35-45+++",
+  "ts": "2026-06-30T06:45:23.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "SBIN",
+   "strike": 1050,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 17,
+    "hi": 21
+   },
+   "targets": [
+    35,
+    45
+   ],
+   "stop": 12,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "HNI OPTION\n\nBUY SBIN 1100 CE AUG @ 21-15 SL 9 TGT 35-40++\n\n🅱️®️♈️",
+  "ts": "2026-07-21T03:50:49.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "SBIN",
+   "strike": 1100,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 21
+   },
+   "targets": [
+    35,
+    40
+   ],
+   "stop": 9,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "100❤️\n\n1st Target Done 🎯\n\nBoom Boom\n\nSensex 74700 CE",
+  "ts": "2026-09-17T04:04:10.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "✅. Sensex 17 Sep 74300 PE\n\nOnly above 90\n\nSL -70\n\nTARGET -100-120-130-140-150",
+  "ts": "2026-09-17T07:57:04.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "SENSEX",
+   "strike": 74300,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 90
+   },
+   "targets": [
+    100,
+    120,
+    130,
+    140,
+    150
+   ],
+   "stop": 70,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "✅. Nifty 22 Sep. 23400 CE\n\nOnly above 70\n\nSL -55\n\nTARGET -75-85-95-100-105-110",
+  "ts": "2026-09-18T04:07:22.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23400,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 70
+   },
+   "targets": [
+    75,
+    85,
+    95,
+    100,
+    105,
+    110
+   ],
+   "stop": 55,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "✅. Nifty 22 Sep. 23500 PE\n\nOnly above 80\n\nSL -60\n\nTARGET -85-95-100-105-110-120",
+  "ts": "2026-09-22T04:59:55.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23500,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 80
+   },
+   "targets": [
+    85,
+    95,
+    100,
+    105,
+    110,
+    120
+   ],
+   "stop": 60,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "निफ़्टी फिलहाल पहले सपोर्ट पर है। 22850 के पास।\nदूसरा सपोर्ट 22800 के पास है।\n\nबैंकनिफ़्टी भी अपने 54700 और 54500 के स्पोर्ट के पास है।\n\nसेंसेक्स में 73000 का सपोर्ट है।\n\nसुबह का डेटा नेगेटिव बना हुआ है।🔽\nया तो मार्केट यहाँ सपोर्ट से रिकवर कर गई वरना और गिरावट बढ़ सकती है।🔽",
+  "ts": "2026-09-28T04:21:24.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Japan hikes Interest Rate By 25 Basis Points To 1.25%\n\nThe Bank of Japan has been raising the rate since 2024, when it stood at minus 0.1%\nJapan's central bank has raised its main interest rate to a fresh 31-year high as it continues to move away from decades of ultra-low borrowing costs and as the country faces increasing economic pressures.",
+  "ts": "2026-09-18T03:35:44.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Intraday LALITHAA\n\n287.35\n\nSecond Target Achieved 🎯\n\n🔥🔥🚀🚀🍀🍀👍",
+  "ts": "2026-09-18T04:04:21.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "Intraday Buy INDOCO cmp 255.1\nTargets 257-261-266\nSl 250",
+  "ts": "2026-09-18T04:29:39.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "INDOCO",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 255.1
+   },
+   "targets": [
+    257,
+    261,
+    266
+   ],
+   "stop": 250,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "Intraday Buy INDOCO cmp 248.7\nTargets 253-256-259-262\nSl 244",
+  "ts": "2026-09-21T04:53:55.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "INDOCO",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 248.7
+   },
+   "targets": [
+    253,
+    256,
+    259,
+    262
+   ],
+   "stop": 244,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "Intraday Buy OMNI cmp 558.5\nTargets 564-568-572-576-580\nSl 552",
+  "ts": "2026-09-21T06:03:08.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "OMNI",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 558.5
+   },
+   "targets": [
+    564,
+    568,
+    572,
+    576,
+    580
+   ],
+   "stop": 552,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "Axis bank btst also 1220 ce 23\nSl 17\nTarget 30/34/39",
+  "ts": "2026-08-17T09:19:17.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "AXISBANK",
+   "strike": 1220,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 23
+   },
+   "targets": [
+    30,
+    34,
+    39
+   ],
+   "stop": 17,
+   "horizon": "btst"
+  }
+ },
+ {
+  "text": "Only 1 Lot\nNifty 24150 ce 80 above\nSl 50\nRisk 30 points 1800/1 Lot\nTarget 136-\nOpen high pending\n\nOnly above 80",
+  "ts": "2026-08-18T06:33:01.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24150,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 80
+   },
+   "targets": [
+    136
+   ],
+   "stop": 50,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Cmp 70\nHolding with sl 50\nTarget same\nGood movementum above 82/84\nTarget 130/150/170",
+  "ts": "2026-08-18T07:53:39.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Sensex 77200 ce 140\nSl 100\nTarget 200/240/280/320",
+  "ts": "2026-08-19T06:20:32.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "SENSEX",
+   "strike": 77200,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 140
+   },
+   "targets": [
+    200,
+    240,
+    280,
+    320
+   ],
+   "stop": 100,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Fire\n\nAsian Energy 460 to 480\n\nAl 5%✓ in a day\n\nExpectating 550/650/750++++\nSoon\nHolding trade",
+  "ts": "2026-08-20T09:51:11.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "1)ZERO  HERO  TRADE BANK NIFTY\n\n🔥56100CE 605 TO 734\n\n📊 ALL TARGET HIT 🎯🎯🎯\n\n📊PERFECT ENTRY 📉📈📉📈⛔🚫",
+  "ts": "2026-09-23T10:44:13.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "CAPITAL KHTAM KARNE SE PEHELE\n\n1 BAR HAMARA 1MONTH SUBSCRIPTION\n\nTRY KARNA",
+  "ts": "2026-09-25T10:50:56.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Option Chain Analysis (31-AUGUST-2026 )\n\nThe options market data reveals a significant open interest build-up at the 24500 Call and 24000 Put.\n\nThe Volume Weighted Average Price (VWAP) suggests a trading range for the next day between 24020 and 24180.\n\nMax Pain : 24100\n\nPut-Call Ratio (PCR) stands at 0.80",
+  "ts": "2026-08-31T16:58:43.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Suggested strategy : Nifty short strangle(Update)\n\nSTRATEGY CMP : 3.9, BOOK FULL PROFIT & CLOSE THE TRADE",
+  "ts": "2026-09-01T03:56:28.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "CASH INTRADAY:-\n\nBUY BAJAJFINSV @ 1965.8 SL 1943 TGT 1995,2014",
+  "ts": "2026-09-01T05:19:59.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "BAJAJFINSV",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 1965.8
+   },
+   "targets": [
+    1995,
+    2014
+   ],
+   "stop": 1943,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "NIFTY OPTION INTRADAY\n\nBUY NSECALL NIFTY 01SEP2026 24050 @ 85.95 SL 60 TGT 115,135",
+  "ts": "2026-09-01T05:47:24.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24050,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 85.95
+   },
+   "targets": [
+    115,
+    135
+   ],
+   "stop": 60,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "CASH INTRADAY\n\nBUY TATAPOWER @ 359.30 SL 355 TGT 365,368",
+  "ts": "2026-09-02T05:22:58.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "TATAPOWER",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 359.3
+   },
+   "targets": [
+    365,
+    368
+   ],
+   "stop": 355,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "Logic is simple here\n\nIT SECTOR STOCK\nNEAR 50 EMA\nBig Candle Mover\n\nSo it is worth taking 2-3% risk for 15-20%  move",
+  "ts": "2026-07-29T04:16:34.000Z",
+  "is": "other"
+ },
+ {
+  "text": "not moving at all, cmp 210 only cost to cost\nexiting",
+  "ts": "2026-07-29T08:00:46.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "exit"
+  }
+ },
+ {
+  "text": "Bought #CMLL 📊\n\nCaliber Mining\n\nsome qty for IPO trade at 537\n\nSL 3%",
+  "ts": "2026-07-31T07:09:59.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "CMLL",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 537
+   },
+   "targets": [],
+   "stop": 520.89,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Bought #GANDHAR 247\n\nSL 1%\n\nTarget -4-6%",
+  "ts": "2026-08-06T06:06:39.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "GANDHAR",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 247
+   },
+   "targets": [
+    256.88,
+    261.82
+   ],
+   "stop": 244.53,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Bought #VARROC 813\n\nSL 807\n\ntarget 820/827/835",
+  "ts": "2026-08-07T08:33:46.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "VARROC",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 813
+   },
+   "targets": [
+    820,
+    827,
+    835
+   ],
+   "stop": 807,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Roto Pump Again Volume maker will be today....Stock will boom soon..and can touch CMP........70 to 73.....\nDon't Buy Only watch",
+  "ts": "2026-06-15T03:32:55.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Black Buck Target Done 535 to 565",
+  "ts": "2026-06-23T04:20:02.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "Rites best Buy at 225......\nBoom 💥 💥 💥 can touch 240.....wait for Magic....\nDon't Buy only watch",
+  "ts": "2026-07-01T04:30:40.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "RITES",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 225
+   },
+   "targets": [
+    240
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Buy Sonata Software at 279..\nTarget 290.........\nTechnology sector booming...\nDon't Buy Only watch",
+  "ts": "2026-09-15T03:57:21.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "SONATSOFTW",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 279
+   },
+   "targets": [
+    290
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Short Term Momentum\n\nRossel Tech\n\n1064 to 1395+ 🔥🔥\n\n31% Swing Move SO Far",
+  "ts": "2026-09-23T03:18:24.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "Fresh Momentum Swing Trade\n\nJG Chemical\n\nCMP 624\n\nSupport 540\n\nFor 750++",
+  "ts": "2026-09-23T03:59:25.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Jindalsteel 1180 ce 18-19\n\nsupport 11\n\nview 24",
+  "ts": "2026-09-23T06:33:44.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "JINDALSTEL",
+   "strike": 1180,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 18,
+    "hi": 19
+   },
+   "targets": [
+    24
+   ],
+   "stop": 11,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Banknifty 57100 ce 140-145\n\nsupport 30\n\nview 230\nholding",
+  "ts": "2026-09-23T08:43:34.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "BANKNIFTY",
+   "strike": 57100,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 140,
+    "hi": 145
+   },
+   "targets": [
+    230
+   ],
+   "stop": 30,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "POLICYBZR 1600 pe oct 170\n\nsupport 140\n\nview 196",
+  "ts": "2026-09-24T04:23:37.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "POLICYBZR",
+   "strike": 1600,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 170
+   },
+   "targets": [
+    196
+   ],
+   "stop": 140,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "NIFTY 13TH MAR 22700 PE\nABOVE 250\nTARGET - 270/300/350\nSL - OWN",
+  "ts": "2025-03-13T03:52:21.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 22700,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 250
+   },
+   "targets": [
+    270,
+    300,
+    350
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "298 🔥 FROM 250 🚀\n1ST TARGET DONE ✅\nEASY PROFIT 3600/-💰",
+  "ts": "2025-03-13T06:13:15.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "NIFTY 20TH MAR 22400 CE\nABOVE 230\nTARGET - 250/275/300\nSL - OWN",
+  "ts": "2025-03-17T03:55:39.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 22400,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 230
+   },
+   "targets": [
+    250,
+    275,
+    300
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "NIFTY 21st JULY 24300 PE\nABOVE 230\nTARGET - 250/280/320\nSL - OWN",
+  "ts": "2026-07-15T04:30:16.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24300,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 230
+   },
+   "targets": [
+    250,
+    280,
+    320
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "LTI🔼🔼\nOnly IT Stocks💥💥\n1st Targets Achieved ✔️\nFrom 4640 to 4940👌👌\nBook Profits at & Trail SL👍",
+  "ts": "2024-06-07T04:55:09.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "Only IT Stocks.. Finally Conviction paying Rewards 😍😍\nIT Index up 10% in 3 days🔥🔥",
+  "ts": "2024-06-07T09:47:09.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Delivery Buy :\n\nBuy Central Bank\nIn range of 61 - 64\nSL : 56\nTarget : 70 - 76 - 82 - 90",
+  "ts": "2024-07-26T09:22:45.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "CENTRALBK",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 61,
+    "hi": 64
+   },
+   "targets": [
+    70,
+    76,
+    82,
+    90
+   ],
+   "stop": 56,
+   "horizon": "positional"
+  }
+ },
+ {
+  "text": "Markets in Panic..\nBut Looks Good to Add Now👍\n\nRisky Contra Call.:\n\nBuy Nifty Fut\nIn range of 24020 - 24140 (Spot Levels)\nSL : 23700\nTarget : 24360 - 24480 - 24660 - 24800",
+  "ts": "2024-11-08T06:40:46.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "future",
+   "symbol": "NIFTY",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 24020,
+    "hi": 24140
+   },
+   "targets": [
+    24360,
+    24480,
+    24660,
+    24800
+   ],
+   "stop": 23700,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Buy IOC (cash/fut)\nIn range of 136 - 140 (spot levels)\nSL : 132\nTarget : 144 - 148 - 152 - 160",
+  "ts": "2024-11-11T07:52:28.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "IOC",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 136,
+    "hi": 140
+   },
+   "targets": [
+    144,
+    148,
+    152,
+    160
+   ],
+   "stop": 132,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "#ATHERENERG GAPPED UP AND MADE HIGH OF 1674",
+  "ts": "2026-08-31T04:18:52.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "#NIFTY 24,000 IS CRUCIAL SUPPORT, IF CRACK AND HOLD BELOW IT, A GOOD DOWNSIDE MOVE EXPECTED.",
+  "ts": "2026-08-31T04:25:37.000Z",
+  "is": "other"
+ },
+ {
+  "text": "🍏🍏🍏🍏🍏\n\nTRADE DATE: 01-Sep-26\n\n#DIFFNKG\n\nBUY ABOVE 486\nTARGET 497\nSL 481",
+  "ts": "2026-09-01T02:16:03.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "DIFFNKG",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 486
+   },
+   "targets": [
+    497
+   ],
+   "stop": 481,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "🍎🍎🍎🍎🍎\n\nTRADE DATE: 01-Sep-26\n\n#JSWENERGY\n\nSELL  BELOW 519\nTARGET 514\nSL 522",
+  "ts": "2026-09-01T02:16:03.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "JSWENERGY",
+   "side": "short",
+   "entry": {
+    "type": "below",
+    "lo": 519
+   },
+   "targets": [
+    514
+   ],
+   "stop": 522,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Our 1st 2nd target done ✅✅✅❣️",
+  "ts": "2026-09-15T07:44:49.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "Nifty 23250 PE\n\nBuy above 25\n\nTarget\n\n35/45/60/80++\n\nSL 16",
+  "ts": "2026-09-15T07:50:15.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23250,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 25
+   },
+   "targets": [
+    35,
+    45,
+    60,
+    80
+   ],
+   "stop": 16,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Buying price\n\n25\n\nAl capital\n\n5****\n\nXxxx\n\nIsko bolte hai lewal",
+  "ts": "2026-09-15T11:00:26.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Sensex 74000 PE\n\nBuy above 220\n\nSL 204\n\nTarget\n\n240/260/280/350++",
+  "ts": "2026-09-16T04:01:05.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "SENSEX",
+   "strike": 74000,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 220
+   },
+   "targets": [
+    240,
+    260,
+    280,
+    350
+   ],
+   "stop": 204,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Sensex 75000 CE\n\nBuy above 35\n\nSL 25\n\nTarget\n\n45/60/80/100+++",
+  "ts": "2026-09-17T04:28:05.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "SENSEX",
+   "strike": 75000,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 35
+   },
+   "targets": [
+    45,
+    60,
+    80,
+    100
+   ],
+   "stop": 25,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "570 TO 870 #SENSEX 74100CE\n\nGAINING RS- 12000/ 2 LOTS 🐎🐎\n\nALL TARGET AL HIT 🎯 🎯\n\nBOOK PARTIAL PROFIT OR TRAIL SL ✅",
+  "ts": "2026-09-11T08:36:40.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "#NIFTY  _23350CE\n🏌️‍♂️Buy Range : 150-160\n🎯Target : 240/310/360\n⛔️Stoploss : 100\n📆 Horizon: Intraday",
+  "ts": "2026-09-15T03:48:46.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23350,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 150,
+    "hi": 160
+   },
+   "targets": [
+    240,
+    310,
+    360
+   ],
+   "stop": 100,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "#HERO_ZERO_NIFTY  _23450CE\n🏌️‍♂️Buy Range : 50-65\n🎯Target : 90/150/230\n⛔️Stoploss : 05\n📆 Horizon: Hero Zero",
+  "ts": "2026-09-15T03:55:58.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23450,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 50,
+    "hi": 65
+   },
+   "targets": [
+    90,
+    150,
+    230
+   ],
+   "stop": 5,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "#NIFTY  _23250 CE\n🏌️‍♂️Buy Range : 140-150\n🎯Target : 190/250/330\n⛔️Stoploss : 80\n📆 Horizon: Intraday",
+  "ts": "2026-09-15T04:28:29.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23250,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 140,
+    "hi": 150
+   },
+   "targets": [
+    190,
+    250,
+    330
+   ],
+   "stop": 80,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "Can buy 1 lot  & Hold for Tomorrow as Decreasing Crude Price will benefit Asianpaints 🙏🙏",
+  "ts": "2026-09-23T05:55:25.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Sbin 692 to 985+\nBharat forge 1000 to 1455+\nM&m 2588 to 3700+",
+  "ts": "2025-11-20T05:31:10.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "[link removed]",
+  "ts": "2025-11-22T14:05:34.000Z",
+  "is": "other"
+ },
+ {
+  "text": "HIGH RSIK CALL: BUY NIFTY 24500 CE (14JULY26) CMP 105-110 SL 70 TGT 190",
+  "ts": "2026-07-07T08:58:37.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24500,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 105,
+    "hi": 110
+   },
+   "targets": [
+    190
+   ],
+   "stop": 70,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "BUY PREMIERENE FUT (JULU26) CMP 1070-1074 SL 1000 TGT 1180",
+  "ts": "2026-07-09T06:41:38.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "future",
+   "symbol": "PREMIERENE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 1070,
+    "hi": 1074
+   },
+   "targets": [
+    1180
+   ],
+   "stop": 1000,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "BUY CHENNPETRO CMP 1160-1167 SL 1070 TGT 1280",
+  "ts": "2026-07-10T04:02:45.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "CHENNPETRO",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 1160,
+    "hi": 1167
+   },
+   "targets": [
+    1280
+   ],
+   "stop": 1070,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "WEEKLY REPORT RECOMMENDATION UPDATE:  🔥🔥BOOK PROFIT IN ENRIN 💥💥CMP 3515🔥🔥 RECOMMENDED AT 3159🚀🚀",
+  "ts": "2026-07-10T08:36:35.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "💎 PREMIUM MEMBERSHIP OPEN 💎\nGet access to our exclusive trading community:\n✅ 3–4 Premium Calls Daily\n✅ NIFTY & BANK NIFTY Trades\n✅ Accurate Entry & Targets\n✅ Proper Stop Loss\n✅ Daily Market Analysis\n💰 Membership: ₹2,000/Month\n📌 Subscription Fee is Non-Refundable.",
+  "ts": "2026-08-26T04:39:20.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Intraday Equity Cash Paid Service\n\nGet high-probability intraday stock recommendations with proper entry, target, and stop-loss levels.\n\n✅ Equity Cash Calls\n✅ Risk Management Guidance\n✅ Timely Trade Updates\n✅ Dedicated Support\n✅ Suitable for Active Traders\n\nJoin our paid intraday service and trade with a disciplined approach to the stock market.\n\nCall / MSG ... [number removed] 🫶🫶🫶\n\n        🦋🦋🦋🦋",
+  "ts": "2026-06-16T14:21:56.000Z",
+  "is": "other"
+ },
+ {
+  "text": "BUY KIRLOSENG  TO 2245\nCMP 2248\nTGT 2286",
+  "ts": "2026-09-29T07:04:42.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "KIRLOSENG",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 2248
+   },
+   "targets": [
+    2286
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "**BIOCON JUL BOOKED PROFIT RS +7200 & EXIT @ 405.90**",
+  "ts": "2026-07-09T09:44:05.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "192+++❤️ 💫 🥰\n\n135 TO 192+++❤️ 💫 🥰\n\nHIT MY ALL TARGET DONE ❤️\n\nFIRE 🔥 ✨ ❤️\n\nENJOY PROFIT WITH RADHA KRISHNA TRADING ACEDEMY 💥 🔥 ✨\n\n👇 👇 👇",
+  "ts": "2026-09-22T05:43:12.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "#HERO_ZERO_CALL'S ❤️ 😍 💫\n\nPAY ONLY - 299/-🥰\n\nJUST CLICK AND BUY CALL'S ❤️ 😍 ❤️\n\nINVESTMENT 25K TO 50K\n\nNIFTY CALL'S ❤️ 💫 😍\n\n#HERO_ZERO_CALL'S",
+  "ts": "2026-09-22T06:05:31.000Z",
+  "is": "other"
+ },
+ {
+  "text": "SENSEX CALL'S ❤️\n\nSENSEX 74100 CE BUY - 283 ABOVE\n\nTARGET - 310-350-400",
+  "ts": "2026-09-24T03:58:50.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "SENSEX",
+   "strike": 74100,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 283
+   },
+   "targets": [
+    310,
+    350,
+    400
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "SENSEX CALL'S ❤️\n\nSENSEX 74400 PE BUY - 297 ABOVE\n\nTARGET - 330-375-400",
+  "ts": "2026-09-24T04:11:33.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "SENSEX",
+   "strike": 74400,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 297
+   },
+   "targets": [
+    330,
+    375,
+    400
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "SENSEX CALL'S ❤️\n\nSENSEX 74000 PE BUY - 110 ABOVE\n\nSL - 75\n\nTARGET - 140-175-200",
+  "ts": "2026-09-24T06:46:53.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "SENSEX",
+   "strike": 74000,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 110
+   },
+   "targets": [
+    140,
+    175,
+    200
+   ],
+   "stop": 75,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "[link removed]\n\n⚡️ My Live Position",
+  "ts": "2026-08-24T04:19:32.000Z",
+  "is": "other"
+ },
+ {
+  "text": "🔥 BIG CONGRATULATIONS TO ONE OF OUR PREMIUM MEMBERS! 🔥\n\n💰 ₹2,40,000+ PROFIT BOOKED IN A SINGLE DAY! 🚀📈\n\nThis is what happens when you follow the setup with discipline + proper risk management. 💪\n\n🏆 Congratulations on an amazing trading day!\n\nKARANRAJ LIVE TRADING — PREMIUM GROUP\n⚠️ Individual results vary. Market risk applies; profits are not guaranteed.",
+  "ts": "2026-08-24T05:28:03.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "⚡ NIFTY SPECIAL — 24000 CE\n\n💰 ENTRY: ₹190\n🎯 TARGETS: ₹210 → ₹250 → ₹300\n🛑 STOP LOSS: ₹143\n\n⏳ WAIT FOR ACTIVATION\n📍 CMP: ₹190\n🔥 ₹190 PRICE AANE + SUSTAIN HONE PAR HI BUY\n\n🔒 T1 HIT → SL TRAIL TO COST\n❌ Below ₹143 → SETUP INVALID\n⚠️ MAX RISK: 1% OF CAPITAL\n\n🕘 TIME: 9:20 AM\n\nKARAN RAJ RESEARCH DESK\nMarket risk applies. No guaranteed returns.",
+  "ts": "2026-08-25T03:52:05.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24000,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 190
+   },
+   "targets": [
+    210,
+    250,
+    300
+   ],
+   "stop": 143,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "🚀 ZERO TO HERO 🚀\n🔥 BANKNIFTY SPECIAL 🔥\n📈 BUY BANKNIFTY 57500 CE @ ₹110\n🎯 TARGETS: ₹130 / ₹160 / ₹190\n\n🛑 STOP LOSS: ₹70\n⏳ WAIT FOR ACTIVATION\n\n📍 CMP: ₹110\n⚡ PRICE ₹110 AANE PAR HI BUY KARNA HAI\n\n🚫 MARKET PRICE PAR CHASE NAHI KARNA\n🕐 TIME: 12:14 PM\n⚠️ ZERO TO HERO = HIGH RISK TRADE — QUANTITY CONTROL MEIN RAKHEIN.\nKARAN RAJ RESEARCH DESK\n\nMarket risk applies. No guaranteed returns.\n\nZero Hero ⚡️",
+  "ts": "2026-08-25T06:49:37.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "BANKNIFTY",
+   "strike": 57500,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 110
+   },
+   "targets": [
+    130,
+    160,
+    190
+   ],
+   "stop": 70,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "⚡ PURE SETUP TRADE — NIFTY SPECIAL\n\n🔥 NIFTY 24350 CE\n\n💰 ENTRY: ₹179\n🎯 TARGETS: ₹195 → ₹225 → ₹260\n🛑 STOP LOSS: ₹138\n\n⏳ WAIT FOR ACTIVATION\n📍 CMP: ₹160\n\n🚫 CMP PAR BUY NAHI KARNA HAI\n⚡ ₹179 PRICE AANE + SUSTAIN HONE PAR HI BUY\n\n🔒 T1 HIT → SL TRAIL TO COST\n❌ Below ₹138 → SETUP INVALID\n⚠️ MAX RISK: 1% OF CAPITAL\n\n🕘 TIME: 9:23 AM\n\nKARAN RAJ RESEARCH DESK\nMarket risk applies. No guaranteed returns.",
+  "ts": "2026-08-26T03:57:00.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24350,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 179
+   },
+   "targets": [
+    195,
+    225,
+    260
+   ],
+   "stop": 138,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "The US Federal Reserve meeting is underway today, 16 September 2026. The rate decision comes at 11:30 PM IST tonight, followed by Fed Chair Kevin Warsh’s press conference at 12:00 midnight IST (17",
+  "ts": "2026-09-16T04:46:00.000Z",
+  "is": "other"
+ },
+ {
+  "text": "✅ Buy nifty 23400 calls @ 100-105 sl 80 target 150",
+  "ts": "2026-09-16T05:15:27.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23400,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 100,
+    "hi": 105
+   },
+   "targets": [
+    150
+   ],
+   "stop": 80,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "early exit the calls 102-104",
+  "ts": "2026-09-16T05:39:55.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "exit"
+  }
+ },
+ {
+  "text": "BUY NIFTY 23100 STRIKE PUTS @ 100-105 SL 80 TARGET 150",
+  "ts": "2026-09-16T05:56:19.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23100,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 100,
+    "hi": 105
+   },
+   "targets": [
+    150
+   ],
+   "stop": 80,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "✅ BUY NIFTY 23400 STRIKE CALLS @ 75-80  SL 60  TARGET 100",
+  "ts": "2026-09-17T05:06:37.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23400,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 75,
+    "hi": 80
+   },
+   "targets": [
+    100
+   ],
+   "stop": 60,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "BUY NIFTY 19650 PE\n\n190-193\n\nSL 160\n\nTGT 220/240/265",
+  "ts": "2023-08-11T04:18:28.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 19650,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 190,
+    "hi": 193
+   },
+   "targets": [
+    220,
+    240,
+    265
+   ],
+   "stop": 160,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Hurry up and unlock this before the content expires or is removed ⚡️ [link removed]",
+  "ts": "2023-08-11T05:28:45.000Z",
+  "is": "other"
+ },
+ {
+  "text": "HCLTECH hit 1st tgt",
+  "ts": "2023-08-14T05:19:25.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "BUY nifty 19200 ce\n\nAbove 192\n\nSl ASPER YOUR COMFORT\n\nTGT 215/245/275/320",
+  "ts": "2023-08-14T06:00:36.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 19200,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 192
+   },
+   "targets": [
+    215,
+    245,
+    275,
+    320
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "BUY NIFTY 19400 PE\n\nABOVE 193\n\nTGT 215/245\n\nSl 152",
+  "ts": "2023-08-25T05:00:56.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 19400,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 193
+   },
+   "targets": [
+    215,
+    245
+   ],
+   "stop": 152,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "✅ BANKNIFTY + NIFTY +SENSEX\n\n✅ALL HERO ZERO EXPIRY\n\n👉 999 1 MONTH + 1 MONTH FREE\n\n👉1499/- 1 year  OFFER\n\nPAY HERE👇👇",
+  "ts": "2026-08-27T17:01:45.000Z",
+  "is": "other"
+ },
+ {
+  "text": "BUY TD POWER SYSTEM@805\n\nSl 730",
+  "ts": "2026-09-11T09:35:25.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "TDPOWERSYS",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 805
+   },
+   "targets": [],
+   "stop": 730,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "ACME Solar: Breakout → Retest → Uptrend ⚡📈\nClean breakout above the ₹320 resistance zone, followed by a sustained higher-high/higher-low structure. Price is now near ₹402, with the rising trendline supporting the bullish setup.",
+  "ts": "2026-09-14T06:07:23.000Z",
+  "is": "other"
+ },
+ {
+  "text": "BUY #NIFTY 23300 PE 15-SEP-2026 AT 35\n\nSL: 3\n\nTARGETS: 50, 70, 95",
+  "ts": "2026-09-15T05:43:50.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23300,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 35
+   },
+   "targets": [
+    50,
+    70,
+    95
+   ],
+   "stop": 3,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Tgt 1 hits\nShift sl to cost 35",
+  "ts": "2026-09-15T08:03:07.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "SELL USTEC 28950\n\nSL 29150\n\nTGT 28650",
+  "ts": "2026-09-15T15:01:48.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "future",
+   "symbol": "NASDAQ",
+   "side": "short",
+   "entry": {
+    "type": "at",
+    "lo": 28950
+   },
+   "targets": [
+    28650
+   ],
+   "stop": 29150,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Ganpati bappa morya 🙏\nMangal murti morya 🙏\n\nGood morning everyone\n\n5 am club ✔️",
+  "ts": "2026-09-08T23:55:13.000Z",
+  "is": "other"
+ },
+ {
+  "text": "TCS 2140 pe\nBack in profits again\n\nPower of patience\n\n19 to 26\n\nRs 1575 profits per lot\n\n👍👍",
+  "ts": "2026-09-09T03:51:25.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "After making good profits in Hindalco in Sept\n\nNow moving to Oct\n\nLooks weak\n\nOption trades are risky\n\nTake if you can take risk, otherwise avoid\n\nBuy Hindalco 920 pe\n\nCmp 6\n\nStop loss 0\n\nTarget 13 - 19 - 26 - 34 - 40 - 48\n\nLot size 700\n\nRisk per lot 4200\n\n*oct series*\n\nTrade with Qty according to risk management\n\nThose who cannot take risk in options, avoid this trade",
+  "ts": "2026-09-24T09:30:44.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "HINDALCO",
+   "strike": 920,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 6
+   },
+   "targets": [
+    13,
+    19,
+    26,
+    34,
+    40,
+    48
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Conviction Delivery Idea\n\nBUY CONFIPET\n\nCMP 82.63\nSL 78.50\nTGT 91.76\n\n- Bullish \"Pennant\" pattern suggesting continuation of the uptrend.",
+  "ts": "2026-07-27T05:26:10.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "CONFIPET",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 82.63
+   },
+   "targets": [
+    91.76
+   ],
+   "stop": 78.5,
+   "horizon": "positional"
+  }
+ },
+ {
+  "text": "Join now: [link removed]",
+  "ts": "2026-07-27T05:26:44.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Overnight\n\nBUY CRIZAC\n\nCMP 192.77\nSL 188.5\nTGT 200.89\n\n– Highly beaten down stocks – Stock crossing above 190 level amid rising volume",
+  "ts": "2026-07-27T08:23:35.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "CRIZAC",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 192.77
+   },
+   "targets": [
+    200.89
+   ],
+   "stop": 188.5,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Conviction Delivery Idea\n\nBUY NEWGEN\n\nCMP 538.70\nSL 522\nTGT 571.35\n\n- Stock has bounced from support levels.\nSustaining above 20 DEMA.",
+  "ts": "2026-07-28T04:08:55.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "NEWGEN",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 538.7
+   },
+   "targets": [
+    571.35
+   ],
+   "stop": 522,
+   "horizon": "positional"
+  }
+ },
+ {
+  "text": "1-2 Days Technical Call Book Partial profits in HONASA at 492-493,  Target 500, BUY Call initiated at 483  Visit our website for disclosure. ()",
+  "ts": "2026-09-24T03:54:58.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "1-2 Days Technical Call Buy ICICIGI above 1534 with Stop Loss 1505 Target 1590  Visit our website for disclosure. ()",
+  "ts": "2026-09-24T04:18:02.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "ICICIGI",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 1534
+   },
+   "targets": [
+    1590
+   ],
+   "stop": 1505,
+   "horizon": "swing"
+  }
+ },
+ {
+  "text": "Intraday Derivatives Call Buy BANKNIFTY 29SEP 56000 CE above 225 with SL 150 Target 375  Visit our website for disclosure ()",
+  "ts": "2026-09-24T04:32:03.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "BANKNIFTY",
+   "strike": 56000,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 225
+   },
+   "targets": [
+    375
+   ],
+   "stop": 150,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "1-2 DAYS Call Technical call BUY BANKNIFTY FUT 29 SEPT ABOVE 55750.8 with SL 55300 Target 56650    Visit our website for disclosure ().",
+  "ts": "2026-09-24T04:33:59.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "future",
+   "symbol": "BANKNIFTY",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 55750.8
+   },
+   "targets": [
+    56650
+   ],
+   "stop": 55300,
+   "horizon": "swing"
+  }
+ },
+ {
+  "text": "You are invited to register for a Zoom webinar!\n\nWhen: September 30, 2026 04:00 PM India\nTopic:  October  Month Outlook\n\nRegister in advance for this webinar:",
+  "ts": "2026-09-24T06:14:06.000Z",
+  "is": "other"
+ },
+ {
+  "text": "BUY BANKNIFTY (56800 )  CE\n\nLEVEL 400 - 420\n\nSTOPLOSS PAID\n\nTARGET 460-600",
+  "ts": "2026-07-27T04:59:11.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "BANKNIFTY",
+   "strike": 56800,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 400,
+    "hi": 420
+   },
+   "targets": [
+    460,
+    600
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "BUY NIFTY ( 23750 ) CE\n\nLEVEL 190 - 200\n\nSTOPLOSS  PAID\n\nTARGET 220 -300",
+  "ts": "2026-07-27T04:59:20.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23750,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 190,
+    "hi": 200
+   },
+   "targets": [
+    220,
+    300
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "BUY BANKNIFTY (57200 )  PE\n\nLEVEL 360 - 340\n\nSTOPLOSS PAID\n\nTARGET 460-600",
+  "ts": "2026-07-28T04:40:26.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "BANKNIFTY",
+   "strike": 57200,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 340,
+    "hi": 360
+   },
+   "targets": [
+    460,
+    600
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "JOIN OUR WHATSAPP SERVICES...\n\nJOIN US AND EARN BIG..💰💰💰\n\nCONTACT [channel name]\n\n[link removed]",
+  "ts": "2026-07-29T04:08:25.000Z",
+  "is": "other"
+ },
+ {
+  "text": "All targets done here as well !\n1K TRADING CLUB 💚💵💚💵",
+  "ts": "2026-09-02T05:58:14.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "[link removed]\n\nMeanwhile repost this - Maxx !",
+  "ts": "2026-09-02T07:05:53.000Z",
+  "is": "other"
+ },
+ {
+  "text": "#AdaniEnsol\nHammer pattern and a follow through candle visible on 75 mins TF\nKEEPING IN WATCHLIST 1300 ce October series\nCmp 49 with SL 39\nNot a buy/sell reco",
+  "ts": "2026-09-29T05:56:07.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "ADANIENSOL",
+   "strike": 1300,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 49
+   },
+   "targets": [],
+   "stop": 39,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "What a move in hind copper\n\nOn fireeeee\n\n565 to 586",
+  "ts": "2026-01-28T03:52:02.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "FEW BREAKOUT STOCKS ON RADAR 👇\n\n1) RUBICON BREAKOUT ABOVE 810",
+  "ts": "2026-02-19T03:43:27.000Z",
+  "is": "other"
+ },
+ {
+  "text": "BUYING RHL\n\nAT CMP 187\n\nFOR 205/230/250\n\nWITH SL 164\n\nIF 200 BREAKS IT CAN BLAST MORE BIG UP\n\nHOTEL STOCKS BUZZING\n\nRESULTS CAN COME BUMPER THIS TIME",
+  "ts": "2026-06-23T04:42:52.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "RHL",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 187
+   },
+   "targets": [
+    205,
+    230,
+    250
+   ],
+   "stop": 164,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Buying dp abhushan again here for swing\n\nCmp 1434\n\nFor 1500++\n\nWith sl 1379",
+  "ts": "2026-07-22T04:13:32.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "DPABHUSHAN",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 1434
+   },
+   "targets": [
+    1500
+   ],
+   "stop": 1379,
+   "horizon": "swing"
+  }
+ },
+ {
+  "text": "205🔥🔥\nTarget 1 done",
+  "ts": "2026-06-05T07:15:14.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "RELIANCE trading below support level\n\nNext important zone to watch near 1190-1220",
+  "ts": "2026-06-08T04:38:34.000Z",
+  "is": "other"
+ },
+ {
+  "text": "NIFTY 23100CE  09th JUN\nBUY Above 200\nSL 185\nTARGET 215/235/270++",
+  "ts": "2026-06-08T05:05:14.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23100,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 200
+   },
+   "targets": [
+    215,
+    235,
+    270
+   ],
+   "stop": 185,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "SENSEX 73900CE 11th JUNE\n\nBUY ABOVE 365\n\nSL 335\n\nTARGET 400/450+",
+  "ts": "2026-06-09T06:45:34.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "SENSEX",
+   "strike": 73900,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 365
+   },
+   "targets": [
+    400,
+    450
+   ],
+   "stop": 335,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "HERO ZERO\n\nNIFTY 23200CE  09th JUN\nBUY At 15-17\nSL 3\nTARGET 40/70/100++",
+  "ts": "2026-06-09T08:33:30.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23200,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 15,
+    "hi": 17
+   },
+   "targets": [
+    40,
+    70,
+    100
+   ],
+   "stop": 3,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "SHORT TERM GAIN TRADE\n\nSTOCK NAME = TVS MOTORS\n\nENTRY = 3550\nSL = 3420\nTARGET = 3800\n\nYOU CAN BUY OPTIONS OF THIS STOCK, WHEN STOCK REACH ENTRY LEVEL",
+  "ts": "2025-12-02T14:58:02.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "TVSMOTOR",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 3550
+   },
+   "targets": [
+    3800
+   ],
+   "stop": 3420,
+   "horizon": "swing"
+  }
+ },
+ {
+  "text": "🚨ATTENTION CRYPTO TRADERS🚨\n\nYOU CAN BUY BITCOIN NOW, VERY GOOD TIME TO INVEST IN BITCOIN, LIKE GOLD AND SILVER. BITCOIN WILL PERFORM VERY WELL, AND IT WILL BOOST YOUR PORTFOLIO\n\nENTRY = 90,850\nSL = 89,900\nTARGET = FIRST TAREGT = 98,000 AND SECOND TARGET = 1,10,000",
+  "ts": "2025-12-10T07:37:07.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "future",
+   "symbol": "BITCOIN",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 90850
+   },
+   "targets": [
+    110000
+   ],
+   "stop": 89900,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "ENTRY DONE BITCOIN AND BITCOIN STARTS ITS WORK\n\n300 POINTS UP FROM ENTRY PRICE🚀🚀🚀",
+  "ts": "2025-12-11T06:14:18.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "📈SWING TRADE📈\n\nSTOCK NAME = TCS\n\nENTRY = ENTRY ALREADY DONE IN STOCK, BUT YOU CAN PLACE YOUR ENTRY ON THE CURRENT MARKET PRICE, OR YOU CAN WAIT TILL THE \"3160\" POINT AREA\n\nSL = 3110\nTARGET = 3350\n\n*TARGET WILL BE MODIFIED ACCORDING TO SECTOR AND INFY SO STAY ACTIVE IN THE CHANNEL FOR UPDATE*",
+  "ts": "2025-12-11T06:19:32.000Z",
+  "is": "other"
+ },
+ {
+  "text": "📈OPTIONS TRADE📈\n\nSTOCK NAME = BANK OF BARODA\n\nSCRIPT NAME = BANKBARODA 30 DEC 287.50 CALL\n\nENTRY = 5.5\n\nSL = 4\n\nTARGET = WHEN STOCK REACH 295",
+  "ts": "2025-12-18T06:50:29.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "BANKBARODA",
+   "strike": 287.5,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 5.5
+   },
+   "targets": [],
+   "stop": 4,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "nifty down only below 24261 if broken and sustained\n\nOtherwise 24600 today",
+  "ts": "2026-07-03T03:47:47.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Full tgt done book all @210-220",
+  "ts": "2026-07-06T05:10:11.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "14 July EXPIRY\n\nBUY NIFTY 24500CE @110-120\nSL URA\n\nTgt 170/210++++\n\nLot 10/20/40/60/100++++",
+  "ts": "2026-07-06T05:10:30.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24500,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 110,
+    "hi": 120
+   },
+   "targets": [
+    170,
+    210
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "28 JULY  EXPIRY\n\nBUY BANKNIFTY 55000PE @ 90-95\n\nSL 40\n\nTGT 200/400/600+++\n\nLOT 1/3/5/10/20/30",
+  "ts": "2026-07-08T04:31:08.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "BANKNIFTY",
+   "strike": 55000,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 90,
+    "hi": 95
+   },
+   "targets": [
+    200,
+    400,
+    600
+   ],
+   "stop": 40,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "14 JULY  EXPIRY\n\nBUY NIFTY 24200PE @ 125-130\n\nSL URS\n\nTGT 170/220/260++++++++\n\nLOT 1/3/5/10/20/30",
+  "ts": "2026-07-08T06:31:40.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24200,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 125,
+    "hi": 130
+   },
+   "targets": [
+    170,
+    220,
+    260
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Gulshan Poly at 180\n\nhighly concentrated situation it needs to cross 200 as soon as possible otherwise with market pressure it may erode more ...\n\nso within 2 week for initiation wave it should start rallying.\n\naverage with 160 only and below than this we may a down till 96-97.",
+  "ts": "2025-06-30T08:52:25.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Tgt 1 done ✅ 🙈🙈\n\nThank God it moved well\n\nAchhe din aane wale hai ?",
+  "ts": "2025-07-01T04:21:18.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "170 TO 240 #NIFTY 24500 PE\n\nGAINING RS- 9,000/ 2 LOTS\n\nSECOND TARGET FULL HIT 🎯 🎯\n\nBOOK PARTIAL PROFIT OR TRAIL SL ✅",
+  "ts": "2026-08-24T05:33:16.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "POSITIONAL STOCK OPTION TRADE\n\nBUY HINDZINC 600 CE ABOVE 29 TRG 32/38/45 SL PAID\n\nSEP EXPIRY",
+  "ts": "2026-08-24T07:12:58.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "HINDZINC",
+   "strike": 600,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 29
+   },
+   "targets": [
+    32,
+    38,
+    45
+   ],
+   "horizon": "positional"
+  }
+ },
+ {
+  "text": "POSITIONAL STOCK OPTION TRADE\n\nBUY BDL 1400 CE ABOVE 39 TRG - 60-75-90  SL Paid\n\nSEP EXPIRY",
+  "ts": "2026-08-24T09:13:08.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "BDL",
+   "strike": 1400,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 39
+   },
+   "targets": [
+    60,
+    75,
+    90
+   ],
+   "horizon": "positional"
+  }
+ },
+ {
+  "text": "Buy NIFTY  _24350 PE Above 150-160\n\nTarget : 220/260/340\n\nStoploss : Paid",
+  "ts": "2026-08-25T03:52:08.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24350,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 150
+   },
+   "targets": [
+    220,
+    260,
+    340
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Can buy 1 or 2 lots for Monday as stock seems good on charts 😍😍",
+  "ts": "2026-09-04T09:27:27.000Z",
+  "is": "other"
+ },
+ {
+  "text": "ANANDRATHI - 2190₹\n\nStrong bullish breakout above ₹2210 resistance with powerful momentum; 2210 sustain can trigger a fresh upside move",
+  "ts": "2026-08-23T15:09:04.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Today #f&o club #herozero trade\n     Nifty 24500 ce ₹14 to ₹135 high\n\n10x profit 📈\n\nEquity me nhi to kya option se kmayenge 💸",
+  "ts": "2026-08-25T14:07:07.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "NIFTY 23050 pe above 79 SL 69 target 90 /105/120++",
+  "ts": "2026-09-25T05:57:58.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 23050,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 79
+   },
+   "targets": [
+    90,
+    105,
+    120
+   ],
+   "stop": 69,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "BTST/SWING TRADE BUY COCHINSHIP CASH CMP 2230 SL 2160 TGT-2300 /2370",
+  "ts": "2024-06-25T08:54:03.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "COCHINSHIP",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 2230
+   },
+   "targets": [
+    2300,
+    2370
+   ],
+   "stop": 2160,
+   "horizon": "btst"
+  }
+ },
+ {
+  "text": "Securities in Ban For Trade Date 26-JUN-2024:\n1 GNFC\n2 INDUSTOWER\n3 PNB\n4 SAIL",
+  "ts": "2024-06-26T03:03:05.000Z",
+  "is": "other"
+ },
+ {
+  "text": "SWING TRADE UPDATE: BOOK PART PROFIT IN GABRIEL AT 491-493 AND REVISE YOUR SL AT COST",
+  "ts": "2024-06-26T03:52:59.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "SWING TRADE BUY GRSE CASH CMP 2080 SL 1960 TGT-2200 /2320",
+  "ts": "2024-06-26T03:57:27.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "GRSE",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 2080
+   },
+   "targets": [
+    2200,
+    2320
+   ],
+   "stop": 1960,
+   "horizon": "swing"
+  }
+ },
+ {
+  "text": "INTRADAY BUY GRANULES CASH CMP 494 SL 487 TGT- 501 / 508",
+  "ts": "2024-06-26T04:03:48.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "GRANULES",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 494
+   },
+   "targets": [
+    501,
+    508
+   ],
+   "stop": 487,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "Group is now on WhatsApp.\nJoin the official channel for timely market updates, insights, and reports.\n👉🏼 [link removed]",
+  "ts": "2026-08-03T05:41:26.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Buy IRCTC in cash @ 505.50 SL 492 TGT 528",
+  "ts": "2026-08-03T06:03:45.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "IRCTC",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 505.5
+   },
+   "targets": [
+    528
+   ],
+   "stop": 492,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Target achieved … Buy RVNL in cash @ 224.95 SL 220 TGT 232",
+  "ts": "2026-08-03T06:52:08.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "Buy ICICIBANK in cash @ 1449-1447 SL 1440 TGT 1470",
+  "ts": "2026-08-03T08:48:18.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "ICICIBANK",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 1447,
+    "hi": 1449
+   },
+   "targets": [
+    1470
+   ],
+   "stop": 1440,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "DTC :- Buy JAIBALAJI in cash @ 63.35-62 SL 60 TGT 1)66 2)70",
+  "ts": "2026-08-04T09:59:34.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "JAIBALAJI",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 62,
+    "hi": 63.35
+   },
+   "targets": [
+    66,
+    70
+   ],
+   "stop": 60,
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "29 TO 31.75 #POSITIONAL_HINDZINC 600 CE\n\nGAINING RS- 7000-/ 2 LOTS\n\nFIRST TARGET AL HIT 🎯 🎯\n\nBOOK PARTIAL PROFIT OR TRAIL SL ✅",
+  "ts": "2026-08-24T07:29:31.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "HERO_ZERO ❤️❤️\n\nBuy NIFTY  _24250PE Above 60-70\n\nTarget : 110/140/210\n\nStoploss : Paid",
+  "ts": "2026-08-25T03:54:13.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24250,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 60
+   },
+   "targets": [
+    110,
+    140,
+    210
+   ],
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "Buy NIFTY  _24300 CE ABOVE 160-175\n\nTarget : 210/320/370\n\nStoploss : Paid",
+  "ts": "2026-08-26T03:48:57.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24300,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 160
+   },
+   "targets": [
+    210,
+    320,
+    370
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Buy NIFTY  _24100CE Above 190-201\n\nTarget : 250/280/340\n\nStoploss : Paid",
+  "ts": "2026-08-27T04:03:38.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "NIFTY",
+   "strike": 24100,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 190
+   },
+   "targets": [
+    250,
+    280,
+    340
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "Market May Show Dip Till 26600 We Are Seeing 26600 Strong Buy Zone from That Levels Good Bounce Back Possible So Just Buy & Keep With Patience . Don't Take Truck Load Quantity If Quantity is Low Trade Can be Managed Very Easily 🙏🙏",
+  "ts": "2026-09-29T04:02:03.000Z",
+  "is": "other"
+ },
+ {
+  "text": "20 Double Toh Ho Gya Bhai  3 Din m 🥇🥇🥇",
+  "ts": "2023-09-07T08:34:50.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "MORNING M LIVE M BTYA THA KI NIFTY IS VERY STRONG ..SEE THE SPIKE ....\n\n2 rs KA OPTION 27  KA HO GYA , Halanki Y Hero Or Zero Trade tha",
+  "ts": "2023-09-07T09:15:02.000Z",
+  "is": "other"
+ },
+ {
+  "text": "SURESHOT JACKPOT CALL🥇🥇🥇\n\nBUY VEDL 230 PE NEAR 6-7 FOR TRG 10 & 15\n\n( Time Duration - 2-3 Days )",
+  "ts": "2023-09-22T05:06:23.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "VEDL",
+   "strike": 230,
+   "optType": "PE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 6,
+    "hi": 7
+   },
+   "targets": [
+    10,
+    15
+   ],
+   "horizon": "swing"
+  }
+ },
+ {
+  "text": "VERY RISKY TRADE ( DURATION 2 -3 DAYS )\n\nBUY IRCTC 280 CE NEAR 10-11 TRG 20",
+  "ts": "2023-09-25T08:52:42.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "IRCTC",
+   "strike": 280,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 10,
+    "hi": 11
+   },
+   "targets": [
+    20
+   ],
+   "horizon": "swing"
+  }
+ },
+ {
+  "text": "MONTHLY STOCK OPTION\n\nBUY  BPCL 395CE NEAR 8-10 TRG 19-20",
+  "ts": "2023-11-23T04:03:43.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "option",
+   "symbol": "BPCL",
+   "strike": 395,
+   "optType": "CE",
+   "side": "long",
+   "entry": {
+    "type": "range",
+    "lo": 8,
+    "hi": 10
+   },
+   "targets": [
+    19,
+    20
+   ],
+   "horizon": "unspecified"
+  }
+ },
+ {
+  "text": "GARWARE HI-TECH FILMS:\n\nCO. SIGNS MOU WITH LUBRIZOL TO COLLABORATE ON ADVANCED TPU-BASED FILM SOLUTIONS;\n\nINVESTMENT OF ₹118 CRORE TO STRENGTHEN BACKWARD INTEGRATION AND EXPAND PPF CAPACITY.",
+  "ts": "2026-09-23T07:46:37.000Z",
+  "is": "other"
+ },
+ {
+  "text": "Raymond realty buy cmp- 669\nBuy on dip - 650\nResistance - 760/ 800\nSupport - 590\n\n3-4days\nPostional",
+  "ts": "2026-09-23T10:33:01.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "RAYMONDREL",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 669
+   },
+   "targets": [
+    760,
+    800
+   ],
+   "stop": 590,
+   "horizon": "positional"
+  }
+ },
+ {
+  "text": "Cupid buy cmp- 275\nDip ob buy - 272\nResistance - 285/ 295\nSupport - 250\n\n3-4days\nPostional",
+  "ts": "2026-09-23T10:37:29.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "CUPID",
+   "side": "long",
+   "entry": {
+    "type": "at",
+    "lo": 275
+   },
+   "targets": [
+    285,
+    295
+   ],
+   "stop": 250,
+   "horizon": "positional"
+  }
+ },
+ {
+  "text": "Bse buy above 3310\nTarget - 3320/ 3330\nSl- 3295\nIntraday",
+  "ts": "2026-09-24T04:44:39.000Z",
+  "is": "call",
+  "expect": {
+   "kind": "equity",
+   "symbol": "BSE",
+   "side": "long",
+   "entry": {
+    "type": "above",
+    "lo": 3310
+   },
+   "targets": [
+    3320,
+    3330
+   ],
+   "stop": 3295,
+   "horizon": "intraday"
+  }
+ },
+ {
+  "text": "2nd target done🔥",
+  "ts": "2026-09-25T08:13:25.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "target-hit"
+  }
+ },
+ {
+  "text": "231 start booking partial profit",
+  "ts": "2026-05-27T04:47:22.000Z",
+  "is": "result",
+  "expect": {
+   "kind": "profit"
+  }
+ },
+ {
+  "text": "Levels 25 may ko hi Diya tha or aaj execution huaa.\n\nTrading me sabse important hai opportunity ka wait karna jo roj roj over trade karne ki kosis karte hai wahi maximum times loss me hote hai.",
+  "ts": "2026-05-27T05:53:52.000Z",
+  "is": "other"
+ }
+]
