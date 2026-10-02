@@ -29,8 +29,6 @@ It looks backward only. It gives no advice on any stock or contract, predicts no
 
 Everything runs in the browser. Messages are never uploaded; price files are fetched from the site's own static folder.
 
-![The coin test across real channels](docs/screenshots/coin-test.png)
-
 ## What the numbers say
 
 Figures the site shows, all reproducible with the scripts in this repository:
@@ -42,8 +40,6 @@ Figures the site shows, all reproducible with the scripts in this repository:
 | Its hit rate | 59% of targets reached; a coin would reach 76% with the same targets and no stop-loss |
 | Its messages | 969 about points and profit, 0 about a loss, in a channel where 119 calls lost money |
 | Twelve public channels with 30 or more replayed calls | 8 reached their targets less often than the coin; 4 stay below it on the reading kindest to the channel |
-
-![A full reckoning](docs/screenshots/report.png)
 
 ## Measured on a known case
 
@@ -58,7 +54,101 @@ The pattern checks were run on the recommendations listed in Annexure A of SEBI'
 
 The last row is a check that did not separate the two groups, and the site says so. An interim order records what SEBI found on a first view; it is not a final finding, and no person is named anywhere in this project.
 
-![The case file](docs/screenshots/case.png)
+## Architecture
+
+```mermaid
+flowchart TB
+  subgraph BUILD["Build time"]
+    direction LR
+    N["NSE and BSE daily files"] --> B["Data scripts<br/>30-day lag, delta encoding"]
+    Q["SEBI register export"] --> B
+  end
+
+  subgraph IN["Where a channel comes from"]
+    direction LR
+    L["Public Telegram link"]
+    E["Telegram export"]
+    W["WhatsApp export"]
+    P["Pasted messages"]
+  end
+
+  subgraph SERVER["Server"]
+    direction LR
+    S[("Static price files<br/>and SEBI register")]
+    R["/api/tme<br/>relays the public preview"]
+  end
+
+  subgraph BROWSER["Browser"]
+    I["Ingest<br/>messages with times"]
+    subgraph WORKER["Web Worker: the engine"]
+      X["Reader<br/>finds the calls"]
+      C["Contract match<br/>strike, type, expiry"]
+      Y["Replay<br/>best, worst, main reading"]
+      G["Ledger<br/>stake, lots, costs"]
+      K["Checks<br/>patterns, result posts,<br/>selling cues, registration"]
+    end
+    V["Report<br/>ledger, what-if, patterns,<br/>complaint draft, pause card"]
+  end
+
+  B --> S
+  L --> R --> I
+  E --> I
+  W --> I
+  P --> I
+  I --> X --> C --> Y --> G --> V
+  X --> K
+  Y --> K --> V
+  S -- "only the files<br/>a channel needs" --> C
+```
+
+The server does two things: it relays a public channel's preview page, and it serves static files. Reading, replaying and every figure in the report are computed in the browser, so messages from an export or a paste never leave the device.
+
+## Project structure
+
+```
+reckoning/
+├── src/
+│   ├── app/                    pages and the one server route
+│   │   ├── page.tsx            landing page
+│   │   ├── reckon/             the report for one channel
+│   │   ├── method/             how a call is checked
+│   │   ├── case/               the pattern checks on a SEBI order
+│   │   └── api/tme/            relay for a public channel's preview
+│   ├── engine/                 everything that decides a result
+│   │   ├── extract.ts          reads calls and result posts out of messages
+│   │   ├── symbols.ts          stock and contract names, nicknames, misspellings
+│   │   ├── resolve.ts          matches a call to its exact contract
+│   │   ├── replay.ts           entry, target, stop-loss and expiry under three readings
+│   │   ├── ledger.ts           the account: stake, lots, costs, borrowed money
+│   │   ├── detect.ts           price-and-volume patterns, result posts against prices
+│   │   ├── promo.ts            what the messages sell
+│   │   ├── registration.ts     SEBI registration numbers against the register
+│   │   └── reckon.ts           runs all of the above for one channel
+│   ├── data/                   compact price-file format and its reader
+│   ├── ingest/                 Telegram preview, Telegram export, WhatsApp export, pasted text
+│   ├── worker/                 runs the engine off the main thread
+│   ├── components/
+│   │   ├── landing/            the exhibits below the ledger replay
+│   │   └── reckon/             report sections and charts
+│   ├── lib/                    English and Hindi text, formats, spoken numbers, complaint draft
+│   └── samples/                figures the pages show, written by the scripts
+├── scripts/                    data download and build, sample, figures, case, voice
+├── tests/                      264 tests, including 184 hand-checked real messages
+└── public/
+    ├── data/                   price files (663 trading days) and the register copy
+    ├── samples/                the sample channel, identifying details removed
+    └── audio/                  the recorded summaries
+```
+
+## How a call is checked
+
+1. A message counts as a call when a stock or contract and at least one price can be read from it. Messages that look like calls but cannot be read are counted and shown.
+2. An option is matched to its exact strike, type and expiry. With no expiry in the message, the nearest expiry in which the quoted price actually traded is used.
+3. The call is entered at the quoted price only if that price traded that day.
+4. It ends at the first target or the stop-loss. With neither, an option is held to expiry and settled against the index or stock.
+5. A daily file cannot say whether a price printed before or after a message, so every call is replayed three ways. The main figure counts a doubtful win only when the channel announced it at the time.
+
+The full rules are on the site's "How it is checked" page and in `src/engine/`.
 
 ## What it cannot do
 
@@ -70,16 +160,6 @@ The last row is a check that did not separate the two groups, and the site says 
 - It cannot tell whether a follower could actually have bought at the quoted price, or how late they saw the message.
 - Its reasons for each call's result are written in English only.
 - It says nothing about what any stock or contract will do next, and never will.
-
-## How a call is checked
-
-1. A message counts as a call when a stock or contract and at least one price can be read from it. Messages that look like calls but cannot be read are counted and shown.
-2. An option is matched to its exact strike, type and expiry. With no expiry in the message, the nearest expiry in which the quoted price actually traded is used.
-3. The call is entered at the quoted price only if that price traded that day.
-4. It ends at the first target or the stop-loss. With neither, an option is held to expiry and settled against the index or stock.
-5. A daily file cannot say whether a price printed before or after a message, so every call is replayed three ways. The main figure counts a doubtful win only when the channel announced it at the time.
-
-The full rules are on the site's "How it is checked" page and in `src/engine/`.
 
 ## Run it
 
@@ -100,19 +180,6 @@ npm run reckon -- <channel handle>                   # reckon one public channel
 npm run samples && npm run landing                   # the sample channel and the landing page's figures
 npm run case                                         # the pattern checks on the SEBI order
 npm run voice                                        # the recorded summaries (needs Python, kokoro, espeak-ng, ffmpeg)
-```
-
-## Layout
-
-```
-src/engine/      reading messages, replaying calls, the ledger, pattern checks, registration
-src/data/        the compact price-file format and its reader
-src/ingest/      Telegram preview, Telegram export, WhatsApp export, pasted text
-src/components/  the landing page, the report, the case file
-src/lib/         both languages, number and date formats, the complaint draft
-scripts/         data download and build, sample and figure builders
-tests/           264 tests, including 184 hand-checked real messages
-public/data/     price files (663 trading days, 1 Jan 2024 to 1 Sep 2026) and the register copy
 ```
 
 ## Data
