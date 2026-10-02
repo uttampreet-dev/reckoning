@@ -1,0 +1,303 @@
+{
+ "ticker": [
+  "🔥🔥CMP PRICE 200\" \"10\" POINT PROFIT 1500 RS/ 2 LOT🔥🔥 #NIFTY",
+  "🔥🔥CMP PRICE 210\" \"20\" POINT PROFIT 3000 RS/ 2 LOT🔥🔥 #NIFTY",
+  "🔥🔥CMP PRICE 390\" \"10\" POINT PROFIT 700 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 400\" \"20\" POINT PROFIT 1400 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 410\" \"30\" POINT PROFIT 2100 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 420\" \"40\" POINT PROFIT 2800 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 200\" \"20\" POINT PROFIT 3000 RS/ 2 LOT🔥🔥 #NIFTY",
+  "🔥🔥CMP PRICE 220\" \"40\" POINT PROFIT 6000 RS/ 2 LOT🔥🔥 #NIFTY",
+  "🔥🔥CMP PRICE 440\" \"20\" POINT PROFIT 1400 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 460\" \"40\" POINT PROFIT 2800 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 480\" \"60\" POINT PROFIT 4200 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 500\" \"80\" POINT PROFIT 5600 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 520\" \"100\" POINT PROFIT 7000 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 540\" \"120\" POINT PROFIT 8400 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 560\" \"140\" POINT PROFIT 9800 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 580\" \"160\" POINT PROFIT 11,200 RS/ 2 LOT🔥🔥 #BANKNIFTY",
+  "🔥🔥CMP PRICE 230\" \"50\" POINT PROFIT 7500 RS/ 2 LOT🔥🔥 #NIFTY",
+  "🔥🔥CMP PRICE 440\" \"20\" POINT PROFIT 2800 RS/ 2 LOT🔥🔥 #BANKNIFTY"
+ ],
+ "builtFrom": {
+  "priceDataTo": "2026-09-01",
+  "minCalls": 30,
+  "channelsRead": 19
+ },
+ "call": {
+  "text": "BUY NIFTY 25950 CE At 170 - 160 SL PAID TGT 250+++",
+  "day": "2025-10-30",
+  "time": "09:26",
+  "contract": "NIFTY 25950 CE",
+  "expiry": "2025-11-04",
+  "entry": 165,
+  "target": 250,
+  "lots": 1,
+  "quantity": 75,
+  "exit": 0,
+  "exitDay": "2025-11-04",
+  "costs": 40,
+  "net": -12415,
+  "high": 228.05,
+  "bars": [
+   {
+    "day": "2025-10-28",
+    "o": 248.75,
+    "h": 289,
+    "l": 150.25,
+    "c": 185.35,
+    "held": false
+   },
+   {
+    "day": "2025-10-29",
+    "o": 192,
+    "h": 287.35,
+    "l": 191.45,
+    "c": 254.95,
+    "held": false
+   },
+   {
+    "day": "2025-10-30",
+    "o": 221,
+    "h": 228.05,
+    "l": 105.05,
+    "c": 115.05,
+    "held": true
+   },
+   {
+    "day": "2025-10-31",
+    "o": 113.05,
+    "h": 142,
+    "l": 44.15,
+    "c": 50.05,
+    "held": true
+   },
+   {
+    "day": "2025-11-03",
+    "o": 48.9,
+    "h": 48.9,
+    "l": 17,
+    "c": 19.9,
+    "held": true
+   },
+   {
+    "day": "2025-11-04",
+    "o": 18.05,
+    "h": 18.05,
+    "l": 0.05,
+    "c": 0.25,
+    "held": true
+   }
+  ]
+ },
+ "doubt": {
+  "text": "BUY NIFTY 26000 CE At 170 - 180 SL PAID TGT 250+++",
+  "day": "2025-10-29",
+  "time": "09:59",
+  "contract": "NIFTY 26000 CE",
+  "expiry": "2025-11-04",
+  "entry": 175,
+  "target": 250,
+  "lots": 1,
+  "quantity": 75,
+  "exit": 0,
+  "exitDay": "2025-11-04",
+  "costs": 40,
+  "net": -13165,
+  "high": 250,
+  "bars": [
+   {
+    "day": "2025-10-27",
+    "o": 144,
+    "h": 245,
+    "l": 143.55,
+    "c": 215.45,
+    "held": false
+   },
+   {
+    "day": "2025-10-28",
+    "o": 219.2,
+    "h": 256.95,
+    "l": 127.1,
+    "c": 159.1,
+    "held": false
+   },
+   {
+    "day": "2025-10-29",
+    "o": 188,
+    "h": 250,
+    "l": 163,
+    "c": 221.3,
+    "held": true
+   },
+   {
+    "day": "2025-10-30",
+    "o": 198.1,
+    "h": 200.05,
+    "l": 85.05,
+    "c": 92.8,
+    "held": true
+   },
+   {
+    "day": "2025-10-31",
+    "o": 90,
+    "h": 113.8,
+    "l": 34.35,
+    "c": 39.1,
+    "held": true
+   },
+   {
+    "day": "2025-11-03",
+    "o": 29.9,
+    "h": 34.9,
+    "l": 11.95,
+    "c": 13.9,
+    "held": true
+   },
+   {
+    "day": "2025-11-04",
+    "o": 6.5,
+    "h": 11.2,
+    "l": 0.05,
+    "c": 0.2,
+    "held": true
+   }
+  ],
+  "announced": false,
+  "quotedMax": 240,
+  "quotedPosts": 3,
+  "likely": {
+   "cls": "expired",
+   "exit": 0,
+   "exitDay": 458,
+   "net": -13165
+  },
+  "best": {
+   "cls": "target",
+   "exit": 250,
+   "exitDay": 454,
+   "net": 5557
+  },
+  "worst": {
+   "cls": "expired",
+   "exit": 0,
+   "exitDay": 458,
+   "net": -13165
+  }
+ },
+ "tape": {
+  "order": "pccppppppccppppppppppccppppppppccpppppppccccppppccppppppoccpppppccppppppccppppppccppppppppccpppppccppppppppccppppppccpppppppppppppppoccpppppccppppppppccpppppppccppppppppccpppppccppppccpppppppppppppccpppppoccpppppppccccpppppppppccppppccpppppppppppccppppccccpppppccppppppppppccppppppccppppppppccppppppppccpppppppccpppppccppppccccpppppppppccppppppppccppppccpppppccppppppppccppppppccppccppccccppppppppppoccppppppppppccccccccpppppccppccppppppccccppppccppppccppppppccppppccpppppppccppppppppppppoccppppppppppppoccpppppccpppppppppppccppppppppppoccpppppccppppppccppppccpppppccppppppppccppppppppppoccpppppccpppppccpppppppccppppppccccpppppccppppccccppppppppppccpppppccpppppppccpppppsccppppppppppppsspsccsoccsccccccccpppppppppppccpppppppppppossccppppsccccppppccpppppppccpppppppccppppccsppppccppccppppppssccpppppsccpppsccppppsccppppccpppppppsccpppppppccccpppppsccccpppppccppppppccpppppccppppppccsppppsccpppppssccccpppoccppppppccppppccppppccccpppppccppppccpppppppccppppccppppppsccpppppppccpppppppppssccpppppppppppccccppppccccpppccppppppccppppccccccppppppppccpppppppccccppppppccpppppccpppppppccppppppccppppppppppccssccppppccppccssccppppppppccppppppccccpppppccppccppppccppppccccppppppppppccpppppccpppppppccccppppssccppppppccppppppccpppppccccpppppppccccccccppppppppsccccppppccccppppppccppppccpppppppccpppppccppppccpppccppppppppppopppoccppppppccppppppppccpppppccpppppppccpppppccppppccpppppppppoccppppppccppppppppppoppo",
+  "counts": {
+   "call": 384,
+   "profit": 969,
+   "loss": 0,
+   "selling": 31,
+   "other": 16,
+   "picture": 0
+  },
+  "messages": 1400,
+  "calls": 384,
+  "noStop": 384,
+  "paywalled": 384,
+  "sellingMessages": 416,
+  "winners": 221,
+  "winnersAnnounced": 183,
+  "losers": 119,
+  "losersMentioned": 89,
+  "losersAdmitted": 0,
+  "checked": 343,
+  "hit": 0.5947521865889213,
+  "chance": 0.7565917660999497
+ },
+ "field": {
+  "channels": [
+   {
+    "chance": 0.3605,
+    "hit": 0.237,
+    "best": 0.4739,
+    "worst": 0.2257,
+    "calls": 709
+   },
+   {
+    "chance": 0.4797,
+    "hit": 0.2282,
+    "best": 0.4521,
+    "worst": 0.1099,
+    "calls": 356
+   },
+   {
+    "chance": 0.4974,
+    "hit": 0.378,
+    "best": 0.5,
+    "worst": 0.3598,
+    "calls": 165
+   },
+   {
+    "chance": 0.4997,
+    "hit": 0.5,
+    "best": 0.75,
+    "worst": 0.0891,
+    "calls": 111
+   },
+   {
+    "chance": 0.5589,
+    "hit": 0.6054,
+    "best": 0.7929,
+    "worst": 0.3716,
+    "calls": 332
+   },
+   {
+    "chance": 0.5755,
+    "hit": 0.4906,
+    "best": 0.7358,
+    "worst": 0.1321,
+    "calls": 53
+   },
+   {
+    "chance": 0.5903,
+    "hit": 0.1471,
+    "best": 0.1471,
+    "worst": 0.1471,
+    "calls": 68
+   },
+   {
+    "chance": 0.6261,
+    "hit": 0.3279,
+    "best": 0.9398,
+    "worst": 0.125,
+    "calls": 61
+   },
+   {
+    "chance": 0.742,
+    "hit": 0.975,
+    "best": 0.9778,
+    "worst": 0.1111,
+    "calls": 40
+   },
+   {
+    "chance": 0.7566,
+    "hit": 0.5948,
+    "best": 0.6851,
+    "worst": 0.5364,
+    "calls": 343,
+    "sample": true
+   },
+   {
+    "chance": 0.7631,
+    "hit": 0.782,
+    "best": 0.8093,
+    "worst": 0.7303,
+    "calls": 289
+   },
+   {
+    "chance": 0.9499,
+    "hit": 0.5797,
+    "best": 0.6014,
+    "worst": 0.5652,
+    "calls": 138
+   }
+  ],
+  "below": 8,
+  "belowOnBest": 4
+ }
+}

@@ -1,0 +1,304 @@
+{
+ "sample": "index-options-a",
+ "label": {
+  "en": "An index-options channel",
+  "hi": "इंडेक्स ऑप्शन का एक चैनल"
+ },
+ "subscribers": "19.8K",
+ "start": 50000,
+ "stake": 10000,
+ "final": 8435,
+ "finalLow": 1751,
+ "finalHigh": 8435,
+ "peak": 61417,
+ "days": 7,
+ "firstDay": "2025-10-24",
+ "lastDay": "2025-10-31",
+ "taken": 9,
+ "worthless": 3,
+ "doubtful": 2,
+ "brags": 31,
+ "lossPosts": 0,
+ "totals": {
+  "calls": 384,
+  "checked": 343,
+  "target": 204,
+  "expired": 136,
+  "worthless": 91
+ },
+ "priceDataTo": "2026-09-01",
+ "events": [
+  {
+   "id": 103464,
+   "time": "24 Oct · 10:03",
+   "kind": "call",
+   "text": "BUY BANKNIFTY 57800 CE At 380 - 400 SL PAID TGT 600+++",
+   "row": {
+    "date": "24 Oct",
+    "contract": "BANKNIFTY 57800 CE",
+    "expiry": "28 Oct",
+    "entry": 390,
+    "exit": 414.1,
+    "exitDate": "28 Oct",
+    "cls": "expired",
+    "status": "taken",
+    "worthless": false,
+    "lots": 1,
+    "net": 781.76,
+    "firm": true,
+    "balance": 50782
+   }
+  },
+  {
+   "id": 103465,
+   "time": "24 Oct · 10:03",
+   "kind": "call",
+   "text": "BUY NIFTY 25800 CE At 200 - 190 SL PAID TGT 250+++",
+   "row": {
+    "date": "24 Oct",
+    "contract": "NIFTY 25800 CE",
+    "expiry": "28 Oct",
+    "entry": 195,
+    "exit": 250,
+    "exitDate": "27 Oct",
+    "cls": "target",
+    "status": "taken",
+    "worthless": false,
+    "lots": 1,
+    "net": 4056.88,
+    "firm": true,
+    "balance": 54839
+   }
+  },
+  {
+   "id": 103466,
+   "time": "24 Oct · 10:43",
+   "kind": "brag",
+   "text": "🔥🔥CMP PRICE  200\"  \"10\" POINT PROFIT 1500 RS/ 2 LOT🔥🔥 #NIFTY"
+  },
+  {
+   "id": 103467,
+   "time": "24 Oct · 10:43",
+   "kind": "brag",
+   "text": "🔥🔥CMP PRICE  210\"  \"20\" POINT PROFIT 3000 RS/ 2 LOT🔥🔥 #NIFTY"
+  },
+  {
+   "id": 103472,
+   "time": "27 Oct · 09:45",
+   "kind": "call",
+   "text": "BUY BANKNIFTY 57700 CE At 420 - 400 SL PAID TGT 600+++",
+   "row": {
+    "date": "27 Oct",
+    "contract": "BANKNIFTY 57700 CE",
+    "expiry": "28 Oct",
+    "entry": 410,
+    "exit": 600,
+    "exitDate": "28 Oct",
+    "cls": "target",
+    "status": "taken",
+    "worthless": false,
+    "lots": 1,
+    "net": 6578.5,
+    "firm": false,
+    "balance": 61417
+   }
+  },
+  {
+   "id": 103473,
+   "time": "27 Oct · 09:45",
+   "kind": "call",
+   "text": "BUY NIFTY 25850 CE At 170 - 190 SL PAID TGT 250+++",
+   "row": {
+    "date": "27 Oct",
+    "contract": "NIFTY 25850 CE",
+    "expiry": "28 Oct",
+    "entry": 180,
+    "exit": 86.2,
+    "exitDate": "28 Oct",
+    "cls": "expired",
+    "status": "taken",
+    "worthless": false,
+    "lots": 1,
+    "net": -7084.7,
+    "firm": true,
+    "balance": 54332
+   }
+  },
+  {
+   "id": 103474,
+   "time": "27 Oct · 11:14",
+   "kind": "brag",
+   "text": "🔥🔥CMP PRICE  200\"  \"20\" POINT PROFIT 3000 RS/ 2 LOT🔥🔥 #NIFTY"
+  },
+  {
+   "id": 103475,
+   "time": "27 Oct · 11:14",
+   "kind": "brag",
+   "text": "🔥🔥CMP PRICE  220\"  \"40\" POINT PROFIT 6000 RS/ 2 LOT🔥🔥 #NIFTY"
+  },
+  {
+   "id": 103484,
+   "time": "28 Oct · 09:33",
+   "kind": "call",
+   "text": "BUY BANKNIFTY 57800 CE At 420 - 400 SL PAID TGT 600+++",
+   "row": {
+    "date": "28 Oct",
+    "contract": "BANKNIFTY 57800 CE",
+    "expiry": "28 Oct",
+    "entry": 410,
+    "exit": 414.1,
+    "exitDate": "28 Oct",
+    "cls": "expired",
+    "status": "taken",
+    "worthless": false,
+    "lots": 1,
+    "net": 81.76,
+    "firm": true,
+    "balance": 54414
+   }
+  },
+  {
+   "id": 103485,
+   "time": "28 Oct · 09:33",
+   "kind": "call",
+   "text": "BUY NIFTY 25850 CE At 170 - 180 SL PAID TGT 250+++",
+   "row": {
+    "date": "28 Oct",
+    "contract": "NIFTY 25850 CE",
+    "expiry": "28 Oct",
+    "entry": 175,
+    "exit": 86.2,
+    "exitDate": "28 Oct",
+    "cls": "expired",
+    "status": "taken",
+    "worthless": false,
+    "lots": 1,
+    "net": -6709.7,
+    "firm": true,
+    "balance": 47705
+   }
+  },
+  {
+   "id": 103486,
+   "time": "28 Oct · 11:19",
+   "kind": "brag",
+   "text": "🔥🔥CMP PRICE  200\"  \"20\" POINT PROFIT 3000 RS/ 2 LOT🔥🔥 #NIFTY"
+  },
+  {
+   "id": 103487,
+   "time": "28 Oct · 11:19",
+   "kind": "brag",
+   "text": "🔥🔥CMP PRICE  220\"  \"40\" POINT PROFIT 6000 RS/ 2 LOT🔥🔥 #NIFTY"
+  },
+  {
+   "id": 103494,
+   "time": "29 Oct · 09:59",
+   "kind": "call",
+   "text": "BUY BANKNIFTY 59000 CE At 380 - 360 SL PAID TGT 600+++",
+   "row": {
+    "date": "29 Oct",
+    "contract": "BANKNIFTY 59000 CE",
+    "expiry": "25 Nov",
+    "cls": "unverifiable",
+    "status": "unverifiable",
+    "worthless": false,
+    "firm": true,
+    "balance": 47705
+   }
+  },
+  {
+   "id": 103495,
+   "time": "29 Oct · 09:59",
+   "kind": "call",
+   "text": "BUY NIFTY 26000 CE At 170 - 180 SL PAID TGT 250+++",
+   "row": {
+    "date": "29 Oct",
+    "contract": "NIFTY 26000 CE",
+    "expiry": "4 Nov",
+    "entry": 175,
+    "exit": 0,
+    "exitDate": "4 Nov",
+    "cls": "expired",
+    "status": "taken",
+    "worthless": true,
+    "lots": 1,
+    "net": -13165,
+    "firm": false,
+    "balance": 34540
+   }
+  },
+  {
+   "id": 103496,
+   "time": "29 Oct · 10:58",
+   "kind": "brag",
+   "text": "🔥🔥CMP PRICE  200\"  \"20\" POINT PROFIT 3000 RS/ 2 LOT🔥🔥 #NIFTY"
+  },
+  {
+   "id": 103497,
+   "time": "29 Oct · 10:58",
+   "kind": "brag",
+   "text": "🔥🔥CMP PRICE  220\"  \"40\" POINT PROFIT 6000 RS/ 2 LOT🔥🔥 #NIFTY"
+  },
+  {
+   "id": 103503,
+   "time": "30 Oct · 09:26",
+   "kind": "call",
+   "text": "BUY BANKNIFTY 59400 CE At 380 - 400 SL PAID TGT 600+++",
+   "row": {
+    "date": "30 Oct",
+    "contract": "BANKNIFTY 59400 CE",
+    "expiry": "25 Nov",
+    "entry": 390,
+    "exit": 0,
+    "exitDate": "25 Nov",
+    "cls": "expired",
+    "status": "taken",
+    "worthless": true,
+    "lots": 1,
+    "net": -13690,
+    "firm": true,
+    "balance": 20850
+   }
+  },
+  {
+   "id": 103504,
+   "time": "30 Oct · 09:26",
+   "kind": "call",
+   "text": "BUY NIFTY 25950 CE At 170 - 160 SL PAID TGT 250+++",
+   "row": {
+    "date": "30 Oct",
+    "contract": "NIFTY 25950 CE",
+    "expiry": "4 Nov",
+    "entry": 165,
+    "exit": 0,
+    "exitDate": "4 Nov",
+    "cls": "expired",
+    "status": "taken",
+    "worthless": true,
+    "lots": 1,
+    "net": -12415,
+    "firm": true,
+    "balance": 8435
+   }
+  },
+  {
+   "id": 103505,
+   "time": "31 Oct · 10:04",
+   "kind": "call",
+   "text": "BUY BANKNIFTY 59200 CE At 380 - 360 SL PAID TGT 600+++",
+   "row": {
+    "date": "31 Oct",
+    "contract": "BANKNIFTY 59200 CE",
+    "expiry": "25 Nov",
+    "entry": 370,
+    "exit": 0,
+    "exitDate": "25 Nov",
+    "cls": "expired",
+    "status": "no-funds",
+    "worthless": true,
+    "firm": true,
+    "balance": 8435
+   }
+  }
+ ]
+}
