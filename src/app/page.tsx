@@ -12,6 +12,7 @@ import { Ticker } from "@/components/landing/Ticker";
 import { WhereToReport } from "@/components/landing/WhereToReport";
 import { Masthead } from "@/components/Masthead";
 import { Replay } from "@/components/Replay";
+import { ReplaySummary } from "@/components/ReplaySummary";
 
 export default function Home() {
   return (
@@ -31,7 +32,9 @@ export default function Home() {
           <div className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
             <Replay />
           </div>
-          <div id="replay-summary" className="min-w-0 max-w-[35rem] lg:col-start-1 lg:row-start-2 lg:self-end" />
+          <div id="replay-summary" className="min-w-0 max-w-[35rem] lg:col-start-1 lg:row-start-2 lg:self-end">
+            <ReplaySummary />
+          </div>
           <ScrollCue />
         </section>
         <Ticker />

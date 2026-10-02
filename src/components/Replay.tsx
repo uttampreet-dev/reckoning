@@ -1,15 +1,11 @@
 "use client";
 // The landing page's centrepiece: a real channel's opening week, replayed. Messages arrive in the chat, each call
 // lifts out and lands on the ledger sheet, and the exchange's prices mark what became of it.
-import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { createPortal } from "react-dom";
 import hero from "@/samples/hero.json";
-import { price, rupees, shortDate, signed } from "@/lib/format";
+import { price, rupees, signed } from "@/lib/format";
 import { useLang } from "@/lib/i18n";
-import { heroSpoken } from "@/lib/spoken";
-import voice from "@/samples/voice.json";
-import { ListenButton } from "./ListenButton";
+import { REPLAY_AGAIN } from "./ReplaySummary";
 
 type Row = {
   date: string;
@@ -36,7 +32,7 @@ const reduced = () => typeof window !== "undefined" && window.matchMedia("(prefe
 const COLS = "grid-cols-[2.9rem_minmax(0,1fr)_5.4rem] @[27rem]:grid-cols-[3rem_minmax(0,1fr)_8.2rem_4.8rem] @[35rem]:grid-cols-[3rem_minmax(8.8rem,1fr)_6.2rem_8.2rem_4.8rem]";
 
 export function Replay() {
-  const { t, lang } = useLang();
+  const { t } = useLang();
   const [shown, setShown] = useState(0); // events on screen
   const [stage, setStage] = useState<Record<number, Stage>>({});
   const [done, setDone] = useState(false);
@@ -45,8 +41,12 @@ export function Replay() {
   const chat = useRef<HTMLDivElement>(null);
   const sheet = useRef<HTMLDivElement>(null);
   const flyer = useRef<HTMLDivElement>(null);
-  const [slot, setSlot] = useState<HTMLElement | null>(null);
-  useEffect(() => setSlot(document.getElementById("replay-summary")), []);
+  // the summary under the input can ask for the week to be replayed
+  useEffect(() => {
+    const again = () => setRun((n) => n + 1);
+    window.addEventListener(REPLAY_AGAIN, again);
+    return () => window.removeEventListener(REPLAY_AGAIN, again);
+  }, []);
 
   // ---- the timeline
   useEffect(() => {
@@ -142,7 +142,6 @@ export function Replay() {
   const settled = rows.filter((e) => stage[e.id] === 2);
   const balance = settled.length ? settled[settled.length - 1].row!.balance : hero.start;
   const curve = [hero.start, ...settled.filter((e) => e.row!.status === "taken").map((e) => e.row!.balance)];
-  const spoken = heroSpoken(t, lang);
 
   return (
     <div ref={root} data-replay className="relative min-w-0 select-none font-body" aria-label={t.replay.sample}>
@@ -215,31 +214,6 @@ export function Replay() {
         </div>
       </div>
 
-      {slot && createPortal(
-        <>
-      {/* ---------------- what the week added up to ---------------- */}
-      <div className={`font-body transition-opacity duration-700 ${done ? "opacity-100" : "opacity-0"}`}>
-        <p className="max-w-2xl text-[15.5px] leading-relaxed text-type">
-          {t.replay.summary(hero.taken, hero.worthless, hero.brags, hero.lossPosts)} <span className="font-semibold text-red">{t.replay.slPaid}</span>
-        </p>
-        {hero.doubtful > 0 && <p className="mt-2 max-w-2xl text-[13.5px] leading-relaxed text-soft">{t.replay.range(hero.doubtful, rupees(hero.finalLow), rupees(hero.finalHigh))}</p>}
-        <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 text-[15px]">
-          <Link href={`/reckon?sample=${hero.sample}`} className="group flex items-center gap-2 bg-type px-5 py-2.5 font-semibold text-page transition-colors hover:bg-red" tabIndex={done ? 0 : -1}>
-            {t.replay.full}
-            <span className="transition-transform group-hover:translate-x-1">→</span>
-          </Link>
-          <ListenButton text={spoken} recorded={(voice as Record<string, { text: string; src: string }>)[lang]} />
-          <button onClick={() => setRun((n) => n + 1)} className="cursor-pointer border-b border-type pb-px text-type transition-colors hover:border-red hover:text-red" tabIndex={done ? 0 : -1}>
-            ↻ {t.replay.again}
-          </button>
-        </div>
-        <p className="mt-4 font-mono text-[10.5px] leading-relaxed text-soft">
-          {t.replay.sample} · {t.replay.source(shortDate(hero.priceDataTo, lang, true))}
-        </p>
-      </div>
-        </>,
-        slot,
-      )}
     </div>
   );
 }
