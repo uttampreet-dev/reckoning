@@ -1,5 +1,7 @@
 # Reckoning
 
+**Live demo:** [reckoning-sigma.vercel.app](https://reckoning-sigma.vercel.app)
+
 **Every tip channel has a day of reckoning. Yours comes before you pay for it.**
 
 Reckoning reads every call a stock-tip channel has posted, replays each one against the exchange's own prices, and shows the record the channel never posts: which calls reached their target, which expired at zero, and what a follower's account would have been left with.
