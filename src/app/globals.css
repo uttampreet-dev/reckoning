@@ -26,6 +26,8 @@
 }
 
 html {
+  /* nothing may widen the page: an element waiting off to the side for its entrance would let a phone pan sideways */
+  overflow-x: clip;
   background: var(--color-page);
   color: var(--color-type);
   -webkit-text-size-adjust: 100%;

@@ -40,6 +40,9 @@ export interface Reckoning {
   claimedAccuracy?: number;
 }
 
+/** how many calls are replayed at the same time */
+const AT_ONCE = 8;
+
 const dictionaries = new WeakMap<Market, Dictionary>();
 export function dictionaryOf(market: Market) {
   let d = dictionaries.get(market);
@@ -69,17 +72,30 @@ export async function reckon(
   const best = new Map<string, Outcome>();
   const worst = new Map<string, Outcome>();
   const same = (a: Outcome, b: Outcome) => a.cls === b.cls && a.exitPrice === b.exitPrice && a.entryPrice === b.entryPrice && a.exitDay === b.exitDay;
+  // Several calls are replayed at once: each waits mostly on its price file, and a channel needs many of them.
+  // Results are stored by position so the maps come out in the order the calls were posted, however they finish.
+  const calls = extraction.calls;
+  const results: [Outcome, Outcome, Outcome][] = new Array(calls.length);
+  let next = 0;
   let done = 0;
-  for (const call of extraction.calls) {
-    const likely = await resolveAndReplay(call, market, "likely", announced.has(call.id));
-    const hi = await resolveAndReplay(call, market, "best");
-    const lo = await resolveAndReplay(call, market, "worst");
-    if (hi.entryPrice !== undefined || lo.entryPrice !== undefined) likely.firm = same(hi, lo);
-    outcomes.set(call.id, likely);
-    best.set(call.id, hi);
-    worst.set(call.id, lo);
-    onProgress?.(++done, extraction.calls.length, likely);
-  }
+  const lane = async () => {
+    while (next < calls.length) {
+      const i = next++;
+      const call = calls[i];
+      const likely = await resolveAndReplay(call, market, "likely", announced.has(call.id));
+      const hi = await resolveAndReplay(call, market, "best");
+      const lo = await resolveAndReplay(call, market, "worst");
+      if (hi.entryPrice !== undefined || lo.entryPrice !== undefined) likely.firm = same(hi, lo);
+      results[i] = [likely, hi, lo];
+      onProgress?.(++done, calls.length, likely);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(AT_ONCE, calls.length) }, lane));
+  calls.forEach((call, i) => {
+    outcomes.set(call.id, results[i][0]);
+    best.set(call.id, results[i][1]);
+    worst.set(call.id, results[i][2]);
+  });
   const differing = (m: Map<string, Outcome>) => Object.fromEntries([...m].filter(([id, o]) => !same(o, outcomes.get(id)!)));
   const times = channel.messages.map((m) => m.ts).sort();
   return {

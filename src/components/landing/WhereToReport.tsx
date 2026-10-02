@@ -87,7 +87,7 @@ export function WhereToReport() {
           </form>
         </div>
 
-        <ol ref={scene} className="self-end border-t-2 border-type">
+        <ol ref={scene} className="self-end overflow-x-clip border-t-2 border-type">
           {L.routes.map(([when, where, domain, href], i) => (
             <li data-route key={domain} className="border-b-[1.5px] border-type">
               <a href={href} target="_blank" rel="noreferrer" className="group grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-5 gap-y-1 px-1 py-6 transition-colors hover:bg-type hover:px-5 hover:text-page sm:grid-cols-[minmax(0,0.9fr)_3.5rem_minmax(0,1.1fr)]">
