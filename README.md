@@ -25,7 +25,7 @@ It looks backward only. It gives no advice on any stock or contract, predicts no
 11. **Replays the same calls with your money**: your capital, your stake per call, and how much of it is borrowed.
 12. **Sets a 24-hour pause**: your own reason, in your own words, and a clock.
 13. **Drafts the report**: an editable complaint, the call list as CSV, and a printable evidence sheet, with the right place to send them.
-14. **Speaks and reads in Hindi and English.**
+14. **Reads in eight languages**: English, Hindi, Marathi, Gujarati, Punjabi, Bengali, Tamil and Telugu. Each language is fetched only when it is chosen. The summary can be listened to: a recorded voice on the first page in English and Hindi, the device's own speech voice elsewhere.
 
 Everything runs in the browser. Messages are never uploaded; price files are fetched from the site's own static folder.
 
@@ -130,7 +130,7 @@ reckoning/
 │   ├── components/
 │   │   ├── landing/            the exhibits below the ledger replay
 │   │   └── reckon/             report sections and charts
-│   ├── lib/                    English and Hindi text, formats, spoken numbers, complaint draft
+│   ├── lib/                    the text in eight languages, formats, spoken numbers, complaint draft
 │   └── samples/                figures the pages show, written by the scripts
 ├── scripts/                    data download and build, sample, figures, case, voice
 ├── tests/                      264 tests, including 184 hand-checked real messages
