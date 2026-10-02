@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+/* Reckoning: a case file. A paper page with dark type, white sheets for the record, a dark panel for the chat.
+   Red ink for losses, green for what the prices confirm, ochre for what they cannot settle. */
+@theme {
+  --color-page: #f3eee2;
+  --color-sheet: #fffdf7;
+  --color-type: #15181a;
+  --color-soft: #6b6658;
+  --color-faint: #a39e8e;
+  --color-hair: #ddd6c4;
+  --color-red: #c2371b;
+  --color-green: #1d6b52;
+  --color-ochre: #8a6212;
+  --color-night: #15181a;
+  --color-night-2: #20262a;
+  --color-amber: #e8b54a;
+  --color-chalk: #e9e4d6;
+
+  --font-display: var(--font-fraunces), var(--font-rozha), Georgia, serif;
+  --font-body: var(--font-instrument), var(--font-anek-deva), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-instrument), var(--font-anek-deva), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  background: var(--color-page);
+  color: var(--color-type);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  min-height: 100dvh;
+  overflow-x: clip;
+}
+
+/* Devanagari needs more line height than Latin at the same size */
+:lang(hi) body {
+  line-height: 1.6;
+}
+
+::selection {
+  background: var(--color-red);
+  color: var(--color-sheet);
+}
+
+@layer components {
+  /* a little tooth over the page, like paper */
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 60;
+    opacity: 0.07;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .rise {
+    animation: rise 0.6s var(--ease-out-expo) both;
+    animation-delay: var(--d, 0ms);
+  }
+
+  @keyframes caret {
+    50% {
+      opacity: 0;
+    }
+  }
+  .caret {
+    animation: caret 1s steps(1) infinite;
+  }
+}
+
+@layer components {
+  /* large serif headings; the optical size axis keeps the big sizes sharp and tight */
+  .display {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 144;
+    letter-spacing: -0.03em;
+  }
+  :lang(hi) .display {
+    font-family: var(--font-rozha), var(--font-fraunces), serif;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  /* a printed sheet: hard edge, hard shadow */
+  .sheet {
+    background: var(--color-sheet);
+    border: 1.5px solid var(--color-type);
+    box-shadow: 8px 8px 0 var(--color-type);
+  }
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-red);
+  }
+  .mark-box {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 0.3em 0.5em 0.26em;
+    border: 1.5px solid currentColor;
+    border-radius: 2px;
+  }
+  /* Devanagari needs more size than Latin capitals to stay legible in a small box */
+  :lang(hi) .mark-box {
+    font-size: 1.25em;
+    letter-spacing: 0;
+  }
+  @keyframes mark-in {
+    0% {
+      opacity: 0;
+      transform: scale(1.9);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(0.94);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .mark-in {
+    animation: mark-in 0.32s var(--ease-out-expo) both;
+  }
+  @keyframes slip-in {
+    0% {
+      opacity: 0;
+      transform: rotate(var(--turn, 3deg)) scale(1.5) translateY(-12px);
+    }
+    60% {
+      opacity: 1;
+      transform: rotate(var(--turn, 3deg)) scale(0.97);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(var(--turn, 3deg));
+    }
+  }
+  .slip-in {
+    animation: slip-in 0.5s var(--ease-out-expo) both;
+  }
+  @keyframes cue-drop {
+    0%,
+    100% {
+      transform: translateY(-2px);
+    }
+    50% {
+      transform: translateY(3px);
+    }
+  }
+  @keyframes ticker {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .ticker {
+    animation: ticker 48s linear infinite;
+  }
+  .ticker:hover {
+    animation-play-state: paused;
+  }
+  .cue-drop {
+    display: inline-block;
+    animation: cue-drop 1.6s ease-in-out infinite;
+  }
+}
+
+/* Devanagari has no capitals and reads badly when letter-spaced: small labels switch to the text face.
+   Outside the layers so it wins over the size and spacing utilities on the same element. */
+:lang(hi) .tag,
+:lang(hi) .eyebrow {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+}
+
+/* range sliders in the page's own ink */
+.range {
+  appearance: none;
+  height: 1.75rem;
+  background: transparent;
+  cursor: pointer;
+}
+.range::-webkit-slider-runnable-track {
+  height: 3px;
+  background: var(--color-type);
+}
+.range::-moz-range-track {
+  height: 3px;
+  background: var(--color-type);
+}
+.range::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: calc(-0.575rem + 1.5px);
+  background: var(--color-red);
+  border: 2px solid var(--color-type);
+  border-radius: 0;
+}
+.range::-moz-range-thumb {
+  width: 0.9rem;
+  height: 0.9rem;
+  background: var(--color-red);
+  border: 2px solid var(--color-type);
+  border-radius: 0;
+}
+.range:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff !important;
+  }
+  .grain::after {
+    display: none;
+  }
+  @page {
+    margin: 14mm 12mm;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker,
+  .cue-drop {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
