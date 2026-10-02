@@ -1,0 +1,18 @@
+# secrets and env
+.env
+.env.*
+
+# raw downloads and local caches (see scripts/)
+data-raw/
+
+# build output
+node_modules/
+.next/
+out/
+dist/
+.vercel/
+*.log
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+test-results/
