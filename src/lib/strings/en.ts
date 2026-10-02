@@ -19,6 +19,14 @@ export const en = {
     sources: { export: "Telegram export", whatsapp: "WhatsApp chat", shots: "Screenshots", paste: "Paste messages" },
     promise: ["No account", "Chats stay on your device", "Looks at the past only"],
     badLink: "That does not look like a public channel link. Try t.me/channelname.",
+    shot: {
+      reading: (i: number, n: number) => `Reading screenshot ${i} of ${n}…`,
+      read: "This is what was read. Correct anything it got wrong.",
+      day: "Posted on",
+      dayMissing: "Choose the day these messages were posted.",
+      none: "No text could be read in that picture.",
+      local: "Read on this device. The pictures are not uploaded.",
+    },
   },
 
   replay: {
