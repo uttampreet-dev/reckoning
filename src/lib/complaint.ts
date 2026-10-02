@@ -1,7 +1,9 @@
 // Turns a reckoning into the things a person needs to report a channel: a draft they can edit and send,
 // and the list of calls as a file. Everything stated comes from the report; nothing is concluded for the reader.
 import type { Reckoning } from "@/engine/reckon";
+import { noteText } from "../engine/notes";
 import { istDate, istTime, price } from "./format";
+import { en } from "./strings/en";
 
 const day = (ymd: string) => {
   const [y, m, d] = ymd.split("-");
@@ -125,7 +127,7 @@ export function callsCsv(r: Reckoning, days: string[]): string {
       o?.exitPrice ?? "",
       l?.ifFunded !== undefined ? o.cls : (o?.code ?? l?.status ?? ""),
       o?.firm === false ? "yes" : "",
-      o?.reason ?? "",
+      o?.reason ? noteText(o.reason, en.notes, day) : "",
     ]
       .map(cell)
       .join(",");

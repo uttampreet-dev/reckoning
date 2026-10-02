@@ -12,6 +12,7 @@
 // a bar that touched both target and stop.
 import type { Bar, Call, EntryBasis, ExitBasis, Outcome, Reading, ResultClass } from "./types";
 import type { Session } from "./time";
+import { note, type Note } from "./notes";
 
 /** a quoted price may sit this far outside the day's traded range and still be accepted (stale quotes, tick rounding) */
 const TOLERANCE = 0.02;
@@ -54,7 +55,7 @@ export function replay(input: ReplayInput): Outcome {
   // which doubtful touches count: wins (best, or likely when the channel announced one) and/or losses
   const reading = input.reading ?? "best";
   const best = reading === "best" || (reading === "likely" && !!input.announced);
-  const assumptions: string[] = [];
+  const assumptions: Note[] = [];
   const done = (o: Core, around?: [number, number]): Outcome => ({
     callId: call.id,
     assumptions,
@@ -67,8 +68,8 @@ export function replay(input: ReplayInput): Outcome {
   if (first < 0 || bars[first].d > input.day) {
     // nothing printed on the day the call could first be acted on
     const later = first >= 0 && bars[first].d - input.day <= 2;
-    if (!later) return done({ cls: "unverifiable", code: "not-traded", reason: "This contract did not trade on the day of the call, so there is no price to check it against." });
-    assumptions.push("No trades on the day of the call; replayed from the next day it traded.");
+    if (!later) return done({ cls: "unverifiable", code: "not-traded", reason: note("notTradedDay") });
+    assumptions.push(note("nextTradedDay"));
   }
   const live = input.session === "in-session" && bars[first].d === input.day; // message landed inside this bar
   const early = live && (input.minutesIn ?? Infinity) <= EARLY_MINUTES;
@@ -96,17 +97,17 @@ export function replay(input: ReplayInput): Outcome {
   if (e.type === "none" || quoted === undefined) {
     if (live) {
       if (call.horizon === "intraday") {
-        return done({ cls: "unverifiable", code: "no-entry", reason: "The message gives no entry price. An intraday call without one cannot be placed on daily prices." });
+        return done({ cls: "unverifiable", code: "no-entry", reason: note("noEntryIntraday") });
       }
       entryPrice = bars[i].c;
       basis = "close";
       scanFrom = i + 1;
-      assumptions.push("No entry price in the message; entered at that day's closing price.");
+      assumptions.push(note("enteredAtClose"));
     } else {
       entryPrice = bars[i].o;
       basis = "open";
       scanFrom = i;
-      assumptions.push("No entry price in the message; entered at the next opening price.");
+      assumptions.push(note("enteredAtNextOpen"));
     }
   } else if (breakout) {
     // the level has to trade, after the message, for the call to start
@@ -127,7 +128,7 @@ export function replay(input: ReplayInput): Outcome {
     }
     if (found < 0) {
       return done(
-        { cls: "not-triggered", code: "level-not-reached", reason: `The entry level ${fmt(quoted)} did not trade within ${window === 1 ? "the day" : `${window} trading days`} of the call.` },
+        { cls: "not-triggered", code: "level-not-reached", reason: note("levelNotReached", fmt(quoted), window) },
         [i, i],
       );
     }
@@ -138,7 +139,7 @@ export function replay(input: ReplayInput): Outcome {
     entryPrice = openedBeyond ? b.o : clamp(quoted, b);
     basis = "trigger";
     scanFrom = i;
-    if (openedBeyond) assumptions.push("Price opened past the entry level; entered at the open.");
+    if (openedBeyond) assumptions.push(note("openedPast"));
     else {
       // Until the trigger, price sat on the near side of the level. On the message bar, what printed before the
       // message is unknown unless the message came at the open. How far price went the other way is never known.
@@ -160,29 +161,29 @@ export function replay(input: ReplayInput): Outcome {
       entryPrice = bar.o;
       basis = "open";
       scanFrom = i;
-      assumptions.push(`The quoted price ${fmt(quoted)} did not trade the next day; entered at the open.`);
+      assumptions.push(note("quotedNotTraded", fmt(quoted)));
     } else {
       return done(
         {
           cls: "unverifiable",
           code: "price-mismatch",
-          reason: `The quoted price ${fmt(quoted)} is outside what this contract traded that day (${fmt(bar.l)} to ${fmt(bar.h)}). The message may refer to a different contract.`,
+          reason: note("priceOutside", fmt(quoted), fmt(bar.l), fmt(bar.h)),
         },
         [i, i],
       );
     }
   }
-  if (!(entryPrice > 0)) return done({ cls: "unverifiable", code: "not-traded", reason: "No usable entry price on that day." });
+  if (!(entryPrice > 0)) return done({ cls: "unverifiable", code: "not-traded", reason: note("noUsableEntry") });
 
   // ---------- levels ----------
   const target = call.targets.find((t) => dir * (t - entryPrice) > 0);
   let stop = call.stop;
-  if (call.targets.length && target === undefined) assumptions.push("Stated target is not beyond the entry price; ignored.");
+  if (call.targets.length && target === undefined) assumptions.push(note("targetIgnored"));
   if (stop !== undefined && dir * (entryPrice - stop) <= 0) {
-    assumptions.push("Stated stop-loss is not on the losing side of the entry price; ignored.");
+    assumptions.push(note("stopIgnored"));
     stop = undefined;
   }
-  if (call.targets.length > 1 && target !== undefined) assumptions.push("First target counts as the exit.");
+  if (call.targets.length > 1 && target !== undefined) assumptions.push(note("firstTarget"));
 
   // ---------- horizon ----------
   const derivative = call.kind !== "equity";
@@ -190,7 +191,7 @@ export function replay(input: ReplayInput): Outcome {
   let horizon = call.horizon;
   if (horizon === "unspecified" && !derivative) {
     horizon = "swing";
-    assumptions.push(`No holding period stated; closed after ${HORIZON_DAYS.swing} trading days if neither level is touched.`);
+    assumptions.push(note("noPeriodShare", HORIZON_DAYS.swing));
   }
   const entryDay = bars[i].d;
   if (horizon === "intraday") lastHold = entryDay;
@@ -199,7 +200,7 @@ export function replay(input: ReplayInput): Outcome {
   else if (horizon === "positional") lastHold = entryDay + HORIZON_DAYS.positional;
   else lastHold = input.expiryDay ?? entryDay + HORIZON_DAYS.swing;
   if (input.expiryDay !== undefined) lastHold = Math.min(lastHold, input.expiryDay);
-  if (horizon === "unspecified" && derivative) assumptions.push("No holding period stated; held until a level is touched or the contract expires.");
+  if (horizon === "unspecified" && derivative) assumptions.push(note("noPeriodContract"));
 
   const finish = (cls: ResultClass, exitIdx: number, exitPrice: number, exitBasis: ExitBasis): Outcome => {
     const move = dir * (exitPrice - entryPrice);
@@ -244,15 +245,15 @@ export function replay(input: ReplayInput): Outcome {
     const hitT = best ? t.maybe : t.sure;
     const hitS = best ? s.sure : s.maybe;
     if (hitT && hitS) {
-      assumptions.push("Target and stop-loss both traded on the same day; daily prices cannot show which came first.");
+      assumptions.push(note("bothSameDay"));
       return best ? finish("target", k, target!, "target") : finish("stop", k, stop!, "stop");
     }
     if (hitT) {
-      if (!t.sure) assumptions.push("The target price traded that day; daily prices cannot show whether that was before or after the message. Read in the channel's favour.");
+      if (!t.sure) assumptions.push(note("targetDoubtful"));
       return finish("target", k, target!, "target");
     }
     if (hitS) {
-      if (!s.sure) assumptions.push("The stop-loss price traded that day; daily prices cannot show whether that was before or after the message. Read against the channel.");
+      if (!s.sure) assumptions.push(note("stopDoubtful"));
       return finish("stop", k, stop!, "stop");
     }
 
@@ -268,17 +269,17 @@ export function replay(input: ReplayInput): Outcome {
   const lastBar = bars[Math.max(i, lastIndexUpTo(bars, lastHold))];
   if (input.expiryDay !== undefined && lastHold === input.expiryDay && input.expiryDay <= input.lastDay) {
     if (input.settlement !== undefined) {
-      assumptions.push("The contract stopped trading before expiry; settled at its expiry value.");
+      assumptions.push(note("settledAtExpiry"));
       return finish("expired", -1, input.settlement, "settlement");
     }
-    assumptions.push("The contract stopped trading before expiry; closed at its last traded price.");
+    assumptions.push(note("closedAtLastPrice"));
     return finish("expired", bars.indexOf(lastBar), lastBar.c, "last-price");
   }
   if (lastHold > input.lastDay) {
-    assumptions.push("Still running when the price data ends; valued at the last closing price.");
+    assumptions.push(note("stillRunning"));
     return finish("open", bars.indexOf(lastBar), lastBar.c, "last-price");
   }
-  assumptions.push("No trades on the last day of the holding period; closed at the last traded price.");
+  assumptions.push(note("noTradesLastDay"));
   return finish("horizon", bars.indexOf(lastBar), lastBar.c, "last-price");
 }
 

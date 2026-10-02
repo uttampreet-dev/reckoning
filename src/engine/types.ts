@@ -1,4 +1,5 @@
 // Shared vocabulary of the engine. Everything here is plain data so it can cross a worker boundary.
+import type { Note } from "./notes";
 
 export interface Msg {
   id: number;
@@ -59,8 +60,8 @@ export interface Call {
   horizon: Horizon;
   raw: string;
   confidence: Confidence;
-  /** why the confidence is what it is, in plain words */
-  notes: string[];
+  /** why the confidence is what it is */
+  notes: Note[];
 }
 
 export type FollowUpKind = "target-hit" | "stop-hit" | "profit" | "exit" | "loss";
@@ -122,7 +123,7 @@ export interface Outcome {
   callId: string;
   cls: ResultClass;
   /** set when cls is unverifiable or not-triggered */
-  reason?: string;
+  reason?: Note;
   code?: UncheckedCode;
   /** exact contract the call was replayed on, e.g. "NIFTY 28-Oct-2025 24500 CE" */
   contract?: string;
@@ -144,7 +145,7 @@ export interface Outcome {
   /** false when the best and the worst reading of the daily prices give different results for this call */
   firm?: boolean;
   /** assumptions that applied to this call, shown in "how this was checked" */
-  assumptions: string[];
+  assumptions: Note[];
   /** bars around the trade for the mini chart */
   bars?: Bar[];
 }

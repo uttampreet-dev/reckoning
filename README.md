@@ -133,7 +133,7 @@ reckoning/
 │   ├── lib/                    the text in eight languages, formats, spoken numbers, complaint draft
 │   └── samples/                figures the pages show, written by the scripts
 ├── scripts/                    data download and build, sample, figures, case, voice
-├── tests/                      264 tests, including 184 hand-checked real messages
+├── tests/                      273 tests, including 184 hand-checked real messages
 └── public/
     ├── data/                   price files (663 trading days) and the register copy
     ├── samples/                the sample channel, identifying details removed
@@ -158,7 +158,7 @@ The full rules are on the site's "How it is checked" page and in `src/engine/`.
 - It cannot read a channel whose public preview is switched off, except from an export file.
 - Stock option contracts are not restated across a split or bonus.
 - It cannot tell whether a follower could actually have bought at the quoted price, or how late they saw the message.
-- Its reasons for each call's result are written in English only.
+- The complaint draft and the call list are written in English only.
 - It says nothing about what any stock or contract will do next, and never will.
 
 ## Run it
@@ -166,7 +166,7 @@ The full rules are on the site's "How it is checked" page and in `src/engine/`.
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm test           # 264 tests
+npm test           # 273 tests
 npm run build
 ```
 

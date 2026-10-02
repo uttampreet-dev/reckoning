@@ -5,6 +5,7 @@ import { Fragment, useMemo, useState } from "react";
 import type { Reckoning } from "@/engine/reckon";
 import type { CueKind } from "@/engine/promo";
 import type { Call, Outcome } from "@/engine/types";
+import { noteText, type Note } from "@/engine/notes";
 import { istDate, percent, price, rupees, shortDate, signed } from "@/lib/format";
 import { useLang } from "@/lib/i18n";
 import { PauseCard } from "../PauseCard";
@@ -394,6 +395,7 @@ function Detail({ call, out, r, days, quantity, lots, costs }: { call: Call; out
   const { t, lang } = useLang();
   const D = t.report.detail;
   const date = (i?: number) => (i === undefined ? "—" : shortDate(days[Math.min(i, days.length - 1)], lang, true));
+  const said = (n: Note) => noteText(n, t.notes, (ymd) => shortDate(ymd, lang, true));
   const alt = (o: Outcome | undefined, label: string) =>
     o && (
       <div className="flex gap-2">
@@ -411,14 +413,14 @@ function Detail({ call, out, r, days, quantity, lots, costs }: { call: Call; out
         {call.notes.length > 0 && (
           <ul className="mt-3 space-y-1 text-[13px] text-ochre">
             {call.notes.map((n, i) => (
-              <li key={i}>· {n}</li>
+              <li key={i}>· {said(n)}</li>
             ))}
           </ul>
         )}
       </div>
       <div className="min-w-0">
         <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-soft">{D.checked}</div>
-        {out.reason && <p className="mt-2 text-[14px] leading-relaxed text-type/90">{out.reason}</p>}
+        {out.reason && <p className="mt-2 text-[14px] leading-relaxed text-type/90">{said(out.reason)}</p>}
         {out.entryPrice !== undefined && (
           <dl className="mt-2 space-y-1 font-mono text-[12px] text-type/90">
             <div className="flex gap-2">
@@ -449,7 +451,7 @@ function Detail({ call, out, r, days, quantity, lots, costs }: { call: Call; out
         {out.assumptions.length > 0 && (
           <ul className="mt-3 space-y-1 text-[13px] leading-snug text-soft">
             {out.assumptions.map((a, i) => (
-              <li key={i}>· {a}</li>
+              <li key={i}>· {said(a)}</li>
             ))}
           </ul>
         )}

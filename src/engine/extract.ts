@@ -3,6 +3,7 @@
 import type { AccuracyClaim, Call, Confidence, EntrySpec, ExpiryHint, FollowUp, FollowUpKind, Horizon, Msg, Side } from "./types";
 import type { Dictionary, Resolved } from "./symbols";
 import { placeMessage } from "./time";
+import { note, type Note } from "./notes";
 
 export interface Unread {
   msgId: number;
@@ -165,7 +166,7 @@ interface Found {
   rest: string;
   /** text around the instrument, for the expiry hint */
   phrase: string;
-  notes: string[];
+  notes: Note[];
   doubt?: Confidence;
   /** where in the message the name was found */
   how?: "option" | "label" | "action" | "tag" | "scan";
@@ -175,7 +176,7 @@ interface Found {
 export const UNNAMED = "?";
 
 function findInstrument(seg: string, dict: Dictionary, day: number): Found | null {
-  const notes: string[] = [];
+  const notes: Note[] = [];
   const options = [...seg.matchAll(OPTION)];
   for (const m of options) {
     const before = seg.slice(Math.max(0, m.index! - 60), m.index!);
@@ -187,14 +188,14 @@ function findInstrument(seg: string, dict: Dictionary, day: number): Found | nul
       const last = words(sameLine).filter((t) => !FILLER.has(t)).at(-1);
       r = last ? dict.nearUnderlying(last) : null;
       if (r) {
-        notes.push(`"${last}" read as ${r.symbol}.`);
+        notes.push(note("readAs", last!, r.symbol));
         doubt = "medium";
       }
     }
     if (!r) continue;
     const distinct = new Set(options.map((o) => `${+o[1]}${o[2][0]}`));
     if (distinct.size > 1) {
-      notes.push("More than one contract in the message; the first one was read.");
+      notes.push(note("firstContract"));
       doubt = "low";
     }
     return {
@@ -227,7 +228,7 @@ function findInstrument(seg: string, dict: Dictionary, day: number): Found | nul
       optType: m[2][0] === "C" ? "CE" : "PE",
       rest: seg.slice(m.index! + m[0].length),
       phrase: seg.slice(Math.max(0, m.index! - 40), m.index! + m[0].length + 22),
-      notes: ["The message does not name the index."],
+      notes: [note("indexUnnamed")],
       doubt: "medium",
       how: "option",
     };
@@ -237,7 +238,7 @@ function findInstrument(seg: string, dict: Dictionary, day: number): Found | nul
 
 /** the instrument a message names outside of an option pattern */
 function findNamed(seg: string, dict: Dictionary, day: number): Found | null {
-  const notes: string[] = [];
+  const notes: Note[] = [];
   // "STOCK NAME = TVS MOTORS", "SCRIP: RELIANCE"
   const label = seg.match(/\b(?:STOCK|SCRIPT?|SCRIP|SYMBOL)\s*(?:NAME)?\s*[:=]\s*([^\n]+)/);
   if (label) {
@@ -301,7 +302,7 @@ function parseSegment(seg: string, dict: Dictionary, day: number, nameOnly = fal
   const saysFuture = /\bFUT\b|\bFUTURES?\b/.test(head) && !/\bCASH\b/.test(head);
   const kind: Call["kind"] = strike !== undefined ? "option" : saysFuture || resolved.kind === "index" ? "future" : "equity";
   if (resolved.via === "name" && resolved.words === 1) {
-    notes.push("Stock matched from part of its company name.");
+    notes.push(note("partName"));
     lower("medium");
   }
 
@@ -398,7 +399,7 @@ function parseSegment(seg: string, dict: Dictionary, day: number, nameOnly = fal
     stop = rel === undefined ? +sl[1] : rel === null ? undefined : Math.round(rel * 100) / 100;
     if (stop === 0) {
       stop = undefined;
-      notes.push("Stop-loss stated as zero: the whole amount is at risk.");
+      notes.push(note("stopZero"));
     }
   }
 
@@ -422,24 +423,24 @@ function parseSegment(seg: string, dict: Dictionary, day: number, nameOnly = fal
 
   // ----- confidence
   if (!hasAction && kind !== "option") {
-    notes.push("The message does not say buy or sell.");
+    notes.push(note("noAction"));
     lower("medium");
   }
   if (entry.type === "none") {
-    notes.push("No entry price in the message.");
+    notes.push(note("noEntry"));
     lower("medium");
   }
   if (!uniq.length && stop === undefined) {
-    notes.push("No target or stop-loss in the message.");
+    notes.push(note("noLevels"));
     lower("medium");
   }
   if (ref !== undefined) {
     if (uniq.length && dir * (uniq[0] - ref) <= 0) {
-      notes.push("The target is not beyond the entry price for this direction.");
+      notes.push(note("targetWrongSide"));
       lower("low");
     }
     if (stop !== undefined && dir * (ref - stop) <= 0) {
-      notes.push("The stop-loss is not on the losing side of the entry price.");
+      notes.push(note("stopWrongSide"));
       lower("low");
     }
   }
@@ -533,7 +534,7 @@ export function extract(messages: Msg[], dict: Dictionary, days: string[]): Extr
       // levels without a name: the instrument is in the message this one replies to, or in the one posted just before it
       const source = (msg.replyTo !== undefined ? namedBy.get(msg.replyTo) : undefined) ?? (before && t - before.t <= 15 * 60_000 ? namedBy.get(before.id) : undefined);
       if (source) {
-        const d = parseSegment(norm, dict, day, false, { ...source, rest: norm, notes: ["Instrument taken from the message this one follows."], doubt: "medium" });
+        const d = parseSegment(norm, dict, day, false, { ...source, rest: norm, notes: [note("fromEarlier")], doubt: "medium" });
         if (d) drafts = [d];
       }
     }
@@ -551,7 +552,7 @@ export function extract(messages: Msg[], dict: Dictionary, days: string[]): Extr
         return;
       }
       const notes = [...draft.notes];
-      if (msg.edited) notes.push("The message was edited after it was posted.");
+      if (msg.edited) notes.push(note("edited"));
       out.calls.push({ ...draft, notes, id: drafts.length > 1 ? `${msg.id}.${k + 1}` : `${msg.id}`, msgId: msg.id, ts: msg.ts, raw: msg.text });
     });
   }
