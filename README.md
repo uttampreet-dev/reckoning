@@ -10,6 +10,8 @@ Reckoning reads every call a stock-tip channel has posted, replays each one agai
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-15181a) ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-15181a) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-15181a) ![GSAP](https://img.shields.io/badge/GSAP-3-15181a) ![Vitest](https://img.shields.io/badge/Vitest-5-15181a)
 
+It does not score how suspicious a message sounds. A message can read as perfectly sensible and still be wrong, so Reckoning checks what the channel said against what the market did.
+
 It looks backward only. It gives no advice on any stock or contract, predicts nothing, and sells nothing.
 
 ## What it does
@@ -155,17 +157,6 @@ reckoning/
 
 The full rules are on the site's "How it is checked" page and in `src/engine/`.
 
-## What it cannot do
-
-- It cannot see inside a trading day. The exchanges publish one open, high, low and close per day; results that depend on the order of prices within the day are marked, and the account is given as a range.
-- It does not read pictures a channel posts in place of text. Screenshots a person brings are read as English text only; the day they were posted has to be confirmed, and a misread figure corrected by hand.
-- It has no prices for commodities, currencies, crypto or foreign markets, and says so for each such call.
-- It cannot read a channel whose public preview is switched off, except from an export file.
-- Stock option contracts are not restated across a split or bonus.
-- It cannot tell whether a follower could actually have bought at the quoted price, or how late they saw the message.
-- The complaint draft and the call list are written in English only.
-- It says nothing about what any stock or contract will do next, and never will.
-
 ## Run it
 
 ```bash
@@ -194,6 +185,17 @@ npm run voice                                        # the recorded summaries (n
 - **Splits and bonuses**: found from the price gap on the day they take effect.
 - **Register**: SEBI's public list of Research Analysts and Investment Advisers, copied on the date shown on the site.
 - **Sample channel**: a real public channel. Its name, links, handles, phone numbers and payment ids are removed before anything is stored.
+
+## What it cannot do
+
+- It cannot see inside a trading day. The exchanges publish one open, high, low and close per day; results that depend on the order of prices within the day are marked, and the account is given as a range.
+- It does not read pictures a channel posts in place of text. Screenshots a person brings are read as English text only; the day they were posted has to be confirmed, and a misread figure corrected by hand.
+- It has no prices for commodities, currencies, crypto or foreign markets, and says so for each such call.
+- It cannot read a channel whose public preview is switched off, except from an export file.
+- Stock option contracts are not restated across a split or bonus.
+- It cannot tell whether a follower could actually have bought at the quoted price, or how late they saw the message.
+- The complaint draft and the call list are written in English only.
+- It says nothing about what any stock or contract will do next, and never will.
 
 ## Third-party software
 
